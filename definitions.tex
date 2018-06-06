@@ -4,6 +4,7 @@
 
 %%%%%%%% PACKAGES %%%%%%%%
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -22,11 +23,15 @@
 \usepackage{url}
 \usepackage{lineno}
 \linenumbers
-%\usepackage[affil-sl]{authblk}
+\usepackage[affil-sl,auth-sc]{authblk}
 %%%%%%%% PACKAGES %%%%%%%%
 
+\renewcommand\Authfont{\scshape\small}
+%\renewcommand\Affilfont{\itshape\small}
+\renewcommand\Affilfont{\slshape\small}
+
 %\usepackage{eucal}
-\usepackage[mathcal]{eucal}
+\usepackage[mathscr]{eucal}
 %\usepackage[mathscr]{eucal}
 
 
