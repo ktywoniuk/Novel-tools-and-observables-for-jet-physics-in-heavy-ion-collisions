@@ -1,0 +1,156 @@
+%!TEX root = THinstituteReport_1.tex
+
+% Common file for including packages & definitions
+
+%%%%%%%% PACKAGES %%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{epsfig,latexsym}
+\usepackage{slashed}
+\usepackage{geometry}
+\geometry{a4paper, hmargin=2.5cm, vmargin=2.5cm}
+\usepackage{simplewick}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{nicefrac}
+%\usepackage[colorlinks=true,linktocpage=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{url}
+\usepackage{lineno}
+\linenumbers
+%\usepackage[affil-sl]{authblk}
+%%%%%%%% PACKAGES %%%%%%%%
+
+%\usepackage{eucal}
+\usepackage[mathcal]{eucal}
+%\usepackage[mathscr]{eucal}
+
+
+\def\App#1{Appendix~\ref{#1}}
+\def\sectionautorefname{Section\!}
+\def\subsectionautorefname{Section\!}
+\def\subsubsectionautorefname{Section\!}
+\def\figureautorefname{Figure\!}
+\def\tableautorefname{Table\!}
+
+\newcommand{\gettitle}{Novel tools and observables for jet physics in heavy-ion collisions}
+\hypersetup{
+	colorlinks,
+	linkcolor={magenta},
+	citecolor={blue},
+	urlcolor={blue},
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	pdftitle={\gettitle},
+%	pdfauthor={Mehtar-Tani, Milhano, Salgado, Tywoniuk},
+	pdfkeywords={QCD jets} {Jet quenching},
+	bookmarksopen=true,
+	bookmarksopenlevel=2,
+	bookmarksnumbered=true
+}
+
+%%%%%%%% DEFINITIONS %%%%%%%%
+\def\be{\begin{eqnarray*}}
+\def\ee{\end{eqnarray*}}
+\def\beq{\begin{eqnarray}}
+\def\eeq{\end{eqnarray}}
+\def\bem{\begin{multline}}
+\def\eem{\end{multline}}
+\def\del{\partial}
+\def\grad{\nabla}
+\def\Eq#1{Eq.~(\ref{#1})}
+
+\def\xperp{{x_\perp}}
+\def\SL{{S(\lp,\lm)}}
+\def\dfourk{\int\!\!\frac{\dd^4 k}{(2 \pi)^4}}
+\def\dfourq{\int\!\!\frac{\dd^4 q}{(2 \pi)^4}}
+\def\dfourkp{\int\!\!\frac{\dd^4 k'}{(2 \pi)^4}}
+\def\dthreek{\int\!\!\frac{\dd^3 k}{(2 \pi)^3 2\omega_k}}
+\def\dthreekp{\int\!\!\frac{\dd^3 k'}{(2 \pi)^3 2 \omega_{k'}}}
+\def\dthreeq{\int\!\!\frac{\dd^3 q}{(2 \pi)^3 2\omega_q}}
+\def\dthreeqp{\int\!\!\frac{\dd^3 q'}{(2 \pi)^3 2 \omega'}}
+\def\dthreeqpm{\int\!\!\frac{\dd^3 q}{(q^+ + q^-)}}
+\def\ddminqpm{\int\!\!\frac{\dd^{d-1} q}{(q^+ + q^-)}}
+\def\MSbar{\overline{\small{\text{MS}}}}
+\def\eps{0^+}
+\def\vac{\text{vac}}
+\def\med{\text{med}}
+\def\gain{\text{gain}}
+\def\loss{\text{loss}}
+\def\coh{\text{coh}}
+\def\incoh{\text{incoh}}
+\def\tot{\text{tot}}
+\def\cut{\text{cut}}
+\def\virt{\text{virt}}
+\def\jet{\text{jet}}
+\def\dd{\text{d}}
+\def\abar{\bar\alpha}
+\def\QW{\text{\tiny QW}}
+\def\BDMPS{\text{\tiny BDMPS}}
+\def\thetajet{R}
+\def\abar{\bar\alpha}
+\def\soft{\text{soft}}
+\def\alert#1{{\color{red}{#1}}}
+\def\tdecoh{t_\text{d}}
+\def\tform{t_\text{f}}
+
+\newcommand{\onehalf}{{\nicefrac{1}{2}}}
+\newcommand{\threehalfs}{{\nicefrac{3}{2}}}
+\newcommand{\onefourth}{{\nicefrac{1}{4}}}
+\newcommand{\onethird}{{\nicefrac{1}{3}}}
+\newcommand{\sR}{{\rm \scriptscriptstyle{R}}}
+\newcommand{\sL}{{\rm \scriptscriptstyle{L}}}
+\newcommand{\sT}{{\rm \scriptstyle{T}}}
+\newcommand{\sE}{{\rm \scriptscriptstyle{E}}}
+\newcommand{\SK}{{\rm \scriptscriptstyle{SK}}}
+\newcommand{\aPT}{a_{\rm \scriptscriptstyle{ PT}}}
+\newcommand{\rme}{\text{e}}
+\newcommand{\rmd}{\text{d}}
+\newcommand{\kT}{k_{\text{\tiny T}}}
+\newcommand{\pT}{p_{\text{\tiny T}}}
+\newcommand{\pTzero}{p_{\text{\tiny T}(0)}}
+\newcommand{\pTone}{p_{\text{\tiny T} 1}}
+\newcommand{\pTtwo}{p_{\text{\tiny T} 2}}
+\newcommand{\pTg}{p_\text{{\tiny T}g}}
+\newcommand{\zg}{\ensuremath{z_\text{g}}}
+\newcommand{\mg}{\ensuremath{M_\text{g}}}
+\newcommand{\dr}{\ensuremath{\Delta R_\text{12}}}
+\newcommand{\sst}{\scriptscriptstyle}
+
+\def\pb{{\bar p}}
+\def\pbp{{\bar p^+}}
+\def\qm{{q^-}}
+\def\qbp{{\bar q^+}}
+\def\lp{{l^+}}
+\def\lm{{l^-}}
+\def\xp{{x^+}}
+\def\xm{{x^-}}
+
+\def\k{\boldsymbol{k}}
+\def\q{\boldsymbol{q}}
+\def\n{\boldsymbol{n}}
+\def\x{\boldsymbol{x}}
+\def\e{\boldsymbol{e}}
+\def\p{\boldsymbol{p}}
+
+\def\nn{\nonumber \\}
+\def\Tebeb{T^{\bar e \bar e}}
+
+\def\E{{\mathcal{E}}}
+\def\O{{\mathcal{O}}}
+\def\T{{\mathcal{T}}}
+\def\P{{\mathcal{P}}}
+\def\G{{\mathcal{G}}}
+\def\A{{\mathcal{A}}}
+\def\Xright{{\left| X_{us}\right\rangle}}
+\def\Xleft{{\left\langle X_{us}\right|}}
+
+\def\OL{{\mathbb{P}_\text{L}}}
+\def\OR{{\mathbb{P}_\text{R}}}
+
+\def\zcut{z_\text{cut}}
+%%%%%%%% DEFINITIONS %%%%%%%%
+
