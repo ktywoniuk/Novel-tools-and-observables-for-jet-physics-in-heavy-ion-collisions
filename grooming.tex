@@ -22,7 +22,7 @@ The Soft Drop algorithm reclusters the anti-$k_{\mathrm{T}}$ jet constituents us
 \frac{\mathrm{min}(p_{\mathrm{T},i},p_{\mathrm{T},j})}{p_{\mathrm{T},i}+p_{\mathrm{T},j}} > z_{\text{cut}}\left( \frac{\Delta R_{ij}}{R_{0}} \right)^{\beta},
 \eeq
 %\end{linenomath}
-where the subscripts ``$i$'' and ``$j$'' indicate the subjets at that step of the declustering, $\Delta R_{ij}$ is the distance between the two subjets, $R_{0}$ is the cone size of the anti-$k_{\mathrm{T}}$ jet, and $z_{\text{cut}}$ and $\beta$ are adjustable parameters. By varying $z_{\text{cut}}$ and $\beta$ specific regions of the emission phase space, see \autoref{fig:PS1}, can be isolated. For $\beta = 0$, this procedure is identical to the modified mass-drop tagger \cite{Dasgupta:2013ihk}. It allows to design specific grooming settings sensitive for example semi-hard radiation from single hard scatterings, soft radiation in the BDMPS regime and soft contribution originating from heating up the medium while the parton shower traverses it.
+where the subscripts ``$i$'' and ``$j$'' indicate the subjets at that step of the declustering, $\Delta R_{ij}$ is the distance between the two subjets, $R_{0}$ is the cone size of the anti-$k_{\mathrm{T}}$ jet, and $z_{\text{cut}}$ and $\beta$ are adjustable parameters. By varying $z_{\text{cut}}$ and $\beta$, specific regions of the emission phase space, see \autoref{fig:PS1}, can be isolated. For $\beta = 0$, this procedure is identical to the modified mass-drop tagger \cite{Dasgupta:2013ihk}. It allows to design specific grooming settings sensitive, for example, to semi-hard radiation from single hard scatterings, soft radiation in the BDMPS regime and soft contribution originating from heating up the medium while the parton shower traverses it.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
@@ -193,7 +193,7 @@ Finally, we study the groomed jet mass normalized by the transverse momentum, $M
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Sensitivity to hadronization and reclustering algorithm}
+\subsubsection{Sensitivity to hadronization effects}
 \label{sec:hadronization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -216,6 +216,22 @@ From perturbative arguments hadronization corrections to the jet $p_{T}$ grow li
 so are potentially important for subjet observables.
 However, since hadronization is a process that happens locally in phase space, jets are less sensitive to the hadronization uncertainties than observables based on hadrons. In this paragraph we investigate how sensitive groomed subjet observables are to the hadronization process. For this purpose we compare the \zg-distribution in PYTHIA8 with and without hadronization for the three SD settings, described above, as shown in \autoref{fig:SDGenZGHadVsPart}. It can be observed that the low-\zg\, region is particularly sensitive to hadronization effects. For grooming with negative $\beta$ the hadron- and parton-level results are most similar, see Fig,~\ref{fig:SDGenZGHadVsPart} (right), because with these grooming settings the soft splittings are rejected. Dedicated studies of these effects in conjunction with medium-modified hadronization are left for the future.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Issues with changing reclustering algorithm}
+\label{sec:reclusteringalgo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/SDAlgorithms/ndropClusteringComp.pdf}%
+\includegraphics[width=0.4\textwidth]{figures/SDAlgorithms/ptratioClusteringComp.pdf}%
+\caption{Effects of grooming on trees that are built up using different reclustering algorithms. Left plot: number of grooming steps. Right plot: ratio of jet $\pT$ before and after grooming.
+}
+\label{fig:PS2Vac_2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The change of algorithm also strongly affects what happens to the jet after grooming. In \autoref{fig:PS2Vac_2} (left), we show the distribution of the number of grooming steps for the three reconstruction algorithms discussed above. In particular, we note that the $k_\perp$ and the anti-$k_\perp$ algorithms result in completely different grooming. While the jet reconstructed with the former algorithm are mainly unaffected by grooming, in the latter case of the order of $\sim 10-20$ branches are groomed away. This also strongly affects the $\pT$ of the groomed jet, as seen in \autoref{fig:PS2Vac_2} (right), where the groomed jets in the anti-$\kT$ sample on average lose $\sim 20$\% of their energy. The C/A algorithm falls in between the two extremes, as usual. Of the order of $\sim 5$ branches are removed by the grooming procedure on average, which slightly reduces the jet $\pT$ by $\lesssim 10$\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[th]
@@ -279,7 +295,7 @@ The jet samples generated from QPYTHIA, JEWEL ``Recoil off'' and JEWEL ``Recoil 
 \label{fig:GroomedGammaJet}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Another benchmark observable is the photon-jet momentum asymmetry. We recall that the variable $x_{J\gamma}$ is defined as the ration of jet to photon momentum, $x_{J\gamma} \equiv p_{\perp,\text{jet}}/p_{\perp,\gamma}$.
+Another benchmark observable is the photon-jet momentum asymmetry. We recall that the variable $x_{J\gamma}$ is defined as the ratio of jet to photon momentum, $x_{J\gamma} \equiv p_{\perp,\text{jet}}/p_{\perp,\gamma}$.
 In \autoref{fig:GroomedGammaJet} we have only included results for JEWEL with recoils turned on. Again, this sample has been unrolled as described above, this time using SD2 grooming. The same features that have been pointed out multiple times, also show up here as a function of collision centrality. Notable, the small-angle sample shows very little dependence of centrality, and is closely peaked around 1. The large-angle sample, on the other hand, is already very different in vacuum (i.e. the 90-100\% curve in \autoref{fig:GroomedGammaJet}) and evolves significantly from central to peripheral. 
 
 These proof-of-point studies illustrate the enhanced sensitivity to more than one variable one obtains by unrolling the underlying jet sample using a well-controlled procedure.
