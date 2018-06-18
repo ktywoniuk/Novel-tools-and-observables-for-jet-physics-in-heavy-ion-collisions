@@ -19,35 +19,29 @@ In the medium, these splittings happen concurrently with, and are affected by, f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{figures/kinematics/lund_2}%
+%\includegraphics[width=0.6\textwidth]{figures/kinematics/lund_2}%
+\includegraphics[width=0.49\textwidth]{figures/kinematics/LundPlot_Regimes_test3}%
+\includegraphics[width=0.49\textwidth]{figures/kinematics/LundPlot_SplittingHistory_test3}%
 \caption{Lund kinematical diagram for vacuum radiation. Figure adapted from Ref.~\cite{Dasgupta:2013ihk}.}
 \label{fig:PS0}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this context, it is very useful to introduce the Lund kinematical diagram \cite{Andersson:1988gp} for an arbitrary $1\to 2$ splitting process. 
-\kmt{Perhaps better do discuss kinematics first, then probability + multiple splittings?}
-\kmt{These variables take advantage of the logarithmic phase space due to the soft, $1/z$, and collinear, $1/\theta$, divergences in QCD splittings.}
-In the soft and collinear limit, and in the absence of medium interactions, the differential probability $\dd P$ of emission of a gluon is given in terms of its kinematical variables by \cite{Dokshitzer:1991wu,Ellis:1991qj}
-\beq
-\label{eq:vacuum-phase-space}
-\dd P = 2\frac{\alpha_s C_i}{\pi}\, \dd \log z\theta \, \dd \log\frac{1}{\theta} \,,
-\eeq
-where $z$ and $\theta$ are the energy sharing fraction of and angle between the constituents of a dipole
-%the gluon that is emitted off a projectile parton 
-in arbitrary color representation ($C_i=C_F$ for quark and $C_i = N_c$ for gluon splitting, respectively). Hence, for fixed coupling, the area spanned below the line $z=1$, see \autoref{fig:PS0}, is uniformly populated by emissions with weight $2\alpha_s C_i/\pi$.
-The radiation can take place up to the jet opening angle $R$.
-In this figure we have also explicitly mapped out the regimes of soft, large-angle  and hard, collinear radiation. For future reference, it is worth keeping in mind that lines at fixed transverse momentum are horizontal, lines at fixed angle vertical, lines at fixed mass diagonal with a positive unit slope, and lines at fixed energy diagonal with a negative unit slope in this diagram. 
-\kmt{What are the axes in the plot we are producing ($\ln\kT/E$ and $\ln R/\theta$)? Where do you hit the non-perturbative regime?}
-
-Before discussing any additional elastic or inelastic processes arising by the presence of a medium, one could consider the fate of vacuum emissions given a certain medium size. It can most naively be compared with the time it takes for a original parton to split into two daughter partons of invariant mass 
+In this context, it is very useful to introduce the kinematical Lund diagram \cite{Andersson:1988gp} for an arbitrary $1\to 2$ splitting process. 
+%\kmt{Perhaps better do discuss kinematics first, then probability + multiple splittings?}
+Working in the small-angle limit, and denoting by $z$ the energy sharing fraction and $\theta$ the dipole splitting angle, we find that the dipole invariant mass reads
 \beq
 \label{eq:DipoleMass}
 %M^2 = z(1-z)\pT^2 \theta^2 \,,
 M^2 = z(1-z) E^2 \theta^2 \,,
 \eeq
-for small angles $\theta$, where $E$ is the total momentum of the dipole
+%for small angles $\theta$, 
+where $E$ is the total momentum of the dipole.
 %longitudinal momentum of the parent parton, 
-see Eq.~(\ref{eq:vacuum-phase-space}). This time is the so-called \textsl{formation time}, and is related to the uncertainty of the time-scale of splitting $\tform \sim \Delta E^{-1}$, and is explicitly given by
+%see Eq.~(\ref{eq:vacuum-phase-space}). 
+The characteristic time-scale of the splitting is usually referred to as the \textsl{formation} time, and is related to the 
+%uncertainty of the time-scale of splitting 
+finite energy resolution,
+$\tform \sim \Delta E^{-1}$. It is explicitly given by
 \beq
 \label{eq:FormationTime}
 %\tform = \frac{2 z(1-z)\pT }{k_\perp^2} = \frac{2 \pT}{M^2} \,,
@@ -57,17 +51,60 @@ see Eq.~(\ref{eq:vacuum-phase-space}). This time is the so-called \textsl{format
 where 
 %$k_\perp = z(1-z)\pT \theta$, in the small angle limit, is the relative transverse momentum of the splitting. 
 $\kT = z(1-z) E \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
-This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
-
-Coming back to the diagram, let us identify emissions that happened inside the medium or, in other words, formation times that are shorter than the medium length ($\tform < L$). 
-This condition results in an area on the Lund diagram delimited by the line solving $\tform = L$,
+This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. 
+%In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
+The Lund diagram exists in various form, the common feature being that the variables spanning the plane exploit the logarithmic phase space due to the soft, $1/z$, and collinear, $1/\theta$, divergences of typical QCD splittings (except $g \to q\bar q $).
+In the soft and collinear limit, usually referred to as the double-logarithmic regime, the differential probability $\dd P$ of 
+%emission of a gluon 
+{\sl one} splitting is given by \cite{Dokshitzer:1991wu,Ellis:1991qj}
 \beq
-\log z \theta = \log \frac{1}{\theta} + \log \frac{1}{\pT L} \,,
+\label{eq:vacuum-phase-space}
+\dd P = 2\frac{\alpha_s C_i}{\pi}\, \dd \log z\theta \, \dd \log\frac{1}{\theta} \,,
 \eeq
-which is also represented in \autoref{fig:PS1}. Hence, the area above the line marked $\tform = L$ correspond to (vacuum) emissions that occur inside the medium. Emissions with $\tform > L$ occupy the region below the line.
+in terms of its kinematical variables, approximating $\kT \approx z E \theta$, and
+%where $z$ and $\theta$ are the energy sharing fraction of and angle between the constituents of a dipole
+%the gluon that is emitted off a projectile parton 
+in arbitrary color representation ($C_i=C_F$ for quark and $C_i = N_c$ for gluon splitting, respectively). Due to the self-similar nature of the phase space \eqref{eq:vacuum-phase-space}, the effect of {\sl multiple} splittings corresponds to higher-order corrections.\footnote{For a given point of the Lund diagram, feed-down from many splittings will at most contribute as $\mathcal{O}(\alpha_s \ln E \ln R)$.} Hence, the area spanned below the line $z=1$, see \autoref{fig:PS0} (left), is uniformly populated by emissions with the weight $2\alpha_s C_i/\pi$. Here, emissions can take place up to the jet opening angle $R$. The density at fixed $\kT$ is mainly modulated by running coupling effects, down to the QCD scale, $\kT \sim \Lambda_\text{\tiny  QCD}$, where non-perturbative effects will dominate. 
+%The radiation can take place up to the jet opening angle $R$.
+In \autoref{fig:PS0} (left) we have also explicitly denoted out the regimes of soft, large-angle  and hard, collinear radiation. 
 
-In order to proceed, we will have to assume something about how the jet constituents interact with the medium. For illustrative purposes we will assume that all propagating particles experience diffusive momentum broadening, where the amount of accumulated momentum is characterized by the dispersion $\langle \kT^2 \rangle = \hat q t$, $t$ determining the time of in-medium propagation. The jet transport coefficient $\hat q$ acts as a diffusion constant in transverse space for the hard modes.\footnote{In this discussion, we neglect the influence of rare, hard kicks in the medium that go beyond this definition.} 
-%While this reflects the expectation from multiple, soft interaction with a plasma and neglects rare, hard collisions, the latter can easily be incorporated into the same discussion.
+%For future reference, it is worth keeping in mind that lines at fixed transverse momentum are horizontal, lines at fixed angle vertical, lines at fixed formation time diagonal with a positive unit slope, and lines at fixed energy diagonal with a negative unit slope in this diagram. 
+%\kmt{What are the axes in the plot we are producing ($\ln\kT/E$ and $\ln R/\theta$)? Where do you hit the non-perturbative regime?}
+%Before discussing any additional elastic or inelastic processes arising by the presence of a medium, one could consider the fate of vacuum emissions given a certain medium size. 
+%It can most naively be compared with the time it takes for a original parton to split into two daughter partons of invariant mass 
+%\beq
+%\label{eq:DipoleMass}
+%%M^2 = z(1-z)\pT^2 \theta^2 \,,
+%M^2 = z(1-z) E^2 \theta^2 \,,
+%\eeq
+%for small angles $\theta$, where $E$ is the total momentum of the dipole
+%%longitudinal momentum of the parent parton, 
+%see Eq.~(\ref{eq:vacuum-phase-space}). This time-scale is usually referred to as the \textsl{formation time}, and is related to the uncertainty of the time-scale of splitting $\tform \sim \Delta E^{-1}$, and is explicitly given by
+%\beq
+%\label{eq:FormationTime}
+%%\tform = \frac{2 z(1-z)\pT }{k_\perp^2} = \frac{2 \pT}{M^2} \,,
+%\tform = \frac{2 z(1-z)E }{\kT^2} = \frac{2 E}{M^2} \,,
+%%(z \pT \theta^2)^{-1} \,,
+%\eeq
+%where 
+%%$k_\perp = z(1-z)\pT \theta$, in the small angle limit, is the relative transverse momentum of the splitting. 
+%$\kT = z(1-z) E \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
+%This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
+
+For a full-fledged jet, the diagram is built up by mapping every branching to a point on the Lund plane. In \autoref{fig:PS0} (right), we illustrate how to fill this plane for multiple, {\sl primary} emissions off the main branch, in this case three. Resolving splitting of each branch will, in turn, generate new, orthogonal Lund planes, and so on. Simplifying the graphical representation, these planes are ultimately collapsed onto the original one. Due to the strong ordering of emissions in the double-logarithmic regime, especially in angles, the emissions are roughly evenly distributed in the splitting variables.
+
+Each point in the diagram is uniquely associated with a specific formation time $\tform$ that is a proxy for the physical time $t$ when a splitting can be resolved.
+%Coming back to the diagram, let us identify emissions that happened inside the medium or, in other words, formation times that are shorter than the medium length ($\tform < L$). 
+%This condition results in an area on the Lund diagram delimited by the line solving $\tform = L$,
+Solving $t = \tform$, results in a line parametrized by
+\beq
+\label{eq:FormationTimeLund}
+\log z \theta = \log \frac{1}{\theta} + \log \frac{1}{\pT t} \,,
+\eeq
+with a positive, unit slope in the plane.
+Hence, each splitting in \autoref{fig:PS0} (right) happens approximately at $t_{\text{f},i}$ ($i=\{1,2,3\}$).
+
+Turning now to medium effects, it is most natural to consider which of the splittings happen inside a medium of length $L$.  The line corresponding to $\tform = L$ is found by substituting $t = L$ in \eqref{eq:FormationTimeLund}, and is also represented in \autoref{fig:PS1} picking a particular value for $L$. Hence, the area above the line marked $\tform = L$ correspond to emissions that occur inside the medium. Emissions with $\tform > L$ occupy the region below the line.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -81,20 +118,29 @@ In order to proceed, we will have to assume something about how the jet constitu
 \label{fig:PS1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Having this picture in mind, a second time-scale immediately becomes relevant. It is typically referred to as the decoherence time, since it gauges whether medium interactions resolve a particular splitting. This occurs whenever the size of the pair, which can be estimated as $x_\perp \sim \theta t$ for small angles, becomes comparable to the medium resolution scale $\lambda_\perp \sim(\hat q t)^{-\onehalf}$ which in turn is inverse to the transverse momentum accumulated by multiple scattering.
-By equating the two, $x_\perp \sim \lambda_\perp$, we find the parametric estimate for the resolution time which turns out to be
+Moreover, we will also assume that all propagating particles experience diffusive momentum broadening, where the amount of accumulated momentum is characterized by the diffusion relation $\langle \kT^2 \rangle = \hat q t$, where $t$ corresponding to the time of in-medium propagation and where the jet transport coefficient $\hat q$ acts as a diffusion constant in transverse space.\footnote{Here we neglect the influence of rare, hard kicks in the medium that go beyond this definition. Their discussion follows closely what we describe below, with the resolution scale $\lambda_\perp \sim q_\perp^{-1}$, where $q_\perp$ is the transverse momentum kick from the medium. We refer, e.g. to \cite{Kurkela:2014tla} for a comprehensive discussion.} 
+%While this reflects the expectation from multiple, soft interaction with a plasma and neglects rare, hard collisions, the latter can easily be incorporated into the same discussion.
+For a given splitting, with a given transverse momentum $\kT$ and formation time $\tform$, the accumulated transverse momentum $\sim \hat q \tform$ could either be small correction or a dominating contribution. The limiting line, $\kT^2 = \hat q \tform$, is parametrized by,
 \beq
-\label{eq:DecoherenceTime}
-\tdecoh = \left( \hat q \theta^2 \right)^{-\onethird} \,,
+\log z\theta = \frac{1}{3} \log \frac{1}{\theta} + \log \frac{\hat q ^\onethird}{\pT} \,.
 \eeq
-which corresponds to the time scale where the dipole constituents decorrelate in color space.
-Hence the line $\tform = \tdecoh$ is parameterized by
+Note that the slope is smaller than in \eqref{eq:FormationTimeLund}.
+More generally, at any instance $t$ we can compare the intrinsic transverse momentum $\kT^2 \sim (\theta t)^{-2}$ to the accumulated one $\sim \hat q t$. This allows us to identify a characteristic time-scale when the two are of the same order that is usually referred to as the {\sl decoherence} time
 \beq
-\log z\theta = \frac{1}{3} \log \frac{1}{\theta} + \log \frac{\hat q ^\onethird}{\pT} \,,
+\tdecoh \sim (\hat q \theta^2)^{-1/3} \,.
 \eeq
-and the area above this line represents the phase space for vacuum emissions.
-As is clear from \autoref{fig:PS1}, this guarantees that at angles smaller than the minimal decoherence angle $\theta_c \sim (\hat q L^3)^{-\onehalf}$, the decoherence time is automatically larger than the medium length.\footnote{Since, $\tdecoh >L$ doesn't make much sense physically, we have represented this element by a dashed line in \autoref{fig:PS1}.} In particular, emissions with $\tform< \tdecoh < L$ correspond to pure vacuum splittings inside the medium that, during their subsequent propagation and possible further branching, will be resolved by medium interactions. Note also that the intersection point $\tform = \tdecoh$ corresponds to emissions with a transverse momentum scale $Q_s \sim(\hat q L)^{1/2}$ and the characteristic energy $\omega_c \sim \hat q L^2$.
-The three time-scales we have identified -- the formation time, $\tform$, the decoherence time, $\tdecoh$, and the length of the medium, $L$ -- can be arranged in three possible orderings. These are marked out on \autoref{fig:PS1} as $\tform < \tdecoh < L $ by the red area, $\tform < L < \tdecoh$ by the blue area and $\tdecoh < \tform < L$ by the green area, respectively. 
+Hence, the line $\tform = \tdecoh$, indicated in \autoref{fig:PS1}, divides the region above, where emissions are not resolved by medium interactions, from the region below, where the dipole splitting kinematics is dominated by diffusion.
+Also note that this broadening-dominated regime seizes to exist for decoherence times longer than the medium length, $\tdecoh \gtrsim L$. This corresponds to small dipole configurations that have a vanishing probability of ever being resolved in the medium. The condition $\tform = \tdecoh = L$ corresponds therefore to the minimal decoherence angle $\theta_c \sim (\hat q L^3)^{-\onehalf}$, see \autoref{fig:PS1}.
+
+%As is clear from \autoref{fig:PS1}, this guarantees that at angles smaller than the minimal decoherence angle $\theta_c \sim (\hat q L^3)^{-\onehalf}$, the decoherence time is automatically larger than the medium length.\footnote{Since, $\tdecoh >L$ doesn't make much sense physically, we have represented this element by a dashed line in \autoref{fig:PS1}.} 
+
+The kinematical Lund plane for {\sl one} splitting inside the medium is therefore divided into three main regimes, in addition to the possibility to fragmenting outside of the medium, $\tform > L$.
+Emissions that fall within the red area in \autoref{fig:PS1}, i.e. with $\tform< \tdecoh < L$, correspond to pure vacuum splittings inside the medium. On the other hand, splittings with $\tdecoh > L$, falling within the blue triangle in \autoref{fig:PS1}, are never resolved by medium interactions.
+Finally, whenever $\tdecoh \lesssim \tform$, see the green triangle in \autoref{fig:PS1}, the splitting kinematics is dominated by medium effects and the probability of splitting is no longer described by \autoref{eq:vacuum-phase-space}, i.e. the Lund plane is not expected to be uniformly filled. These splittings will also undergo further momentum broadening in the medium. For a comprehensive discussion of this regime, we refer to \cite{Kurkela:2014tla,Blaizot:2014rla}.
+
+%Note also that the intersection point $\tform = \tdecoh$ corresponds to emissions with a transverse momentum scale $Q_s \sim(\hat q L)^{1/2}$ and the characteristic energy $\omega_c \sim \hat q L^2$.
+%The three time-scales we have identified -- the formation time, $\tform$, the decoherence time, $\tdecoh$, and the length of the medium, $L$ -- can be arranged in three possible orderings. These are marked out on \autoref{fig:PS1} as $\tform < \tdecoh < L $ by the red area, $\tform < L < \tdecoh$ by the blue area and $\tdecoh < \tform < L$ by the green area, respectively. 
+
 %{\it The phase space of these regions is given by their area, and is easily found to be
 %\begin{align}
 %{\color{red} A_{\tform < \tdecoh < L}} &{\color{red}= \frac{1}{2}\ln \frac{R^2}{\theta_c^2} \left(\ln \frac{\pT}{\omega_c} + \frac{1}{3}\ln \frac{R^2}{\theta_c^2} \right)}  \,,\\
@@ -104,35 +150,43 @@ The three time-scales we have identified -- the formation time, $\tform$, the de
 %for $\pT > \omega_c$, where $\omega_c = \hat q L^2$.
 %It is worth pointing out, that vacuum emissions that are emitted inside the medium at sufficiently small angles, $\theta < \theta_c$, remain unresolved by interactions with the medium \cite{MehtarTani:2010ma,MehtarTani:2011tz}. This implies that splittings in this region should follow a vacuum emission pattern, yet the jet is quenched (coherently) due to the presence of a total color charge \cite{CasalderreySolana:2012ef}. }
 %It poses an exciting  challenge to pin this region down experimentally.
-The second ordering is particularly interesting, giving rise to splittings that are formed inside the medium yet remain completely unresolved by medium interactions due to strong interference effects. It is often referred to as the coherence regime.
 
-Before moving on, let us briefly contemplate a different mechanism of medium interactions based on incoherent scatterings.
-%model for the medium interactions.
-In this case, the resolution scale of the medium is simply the inverse of the medium momentum exchange, $\lambda_\perp \sim q_\perp^{-1}$. Now, the decoherence time is $\tdecoh \sim (\theta q_\perp)^{-1}$ which gives to a minimal coherence angle $\theta_c \sim (q_\perp L)^{-1}$. In effect, the coherence regime exists only for sufficiently soft interactions $q_\perp < \sqrt{\pT/L}$.
+%The second ordering is particularly interesting, giving rise to splittings that are formed inside the medium yet remain completely unresolved by medium interactions due to strong interference effects. It is often referred to as the coherence regime.
+%
+%%Before moving on, let us briefly contemplate a different mechanism of medium interactions based on incoherent scatterings.
+%%%model for the medium interactions.
+%%In this case, the resolution scale of the medium is simply the inverse of the medium momentum exchange, $\lambda_\perp \sim q_\perp^{-1}$. Now, the decoherence time is $\tdecoh \sim (\theta q_\perp)^{-1}$ which gives to a minimal coherence angle $\theta_c \sim (q_\perp L)^{-1}$. In effect, the coherence regime exists only for sufficiently soft interactions $q_\perp < \sqrt{\pT/L}$.
+%
+%Now let us briefly review the possible additional radiative channels that are opened due to interactions with the medium. It is important to stress that the emission probability for medium-induced radiation, such as Eq.~(\ref{eq:vacuum-phase-space}) for the vacuum radiation, does not factorize in the same way. Hence, the phase space in the Lund diagram is not anymore uniformly filled. 
+%
+%Let us firstly describe the multiple scattering regime. It applies to situations when, in course of their formation, induced gluons experience transverse momentum broadening, approximated by $\langle k_\perp^2 \rangle \lesssim \hat q \tform$, see e.g. \cite{Kurkela:2014tla} for a more thorough discussion. We can invert this relation to find that the formation time of the emitted particles becomes $\tform(\omega) \sim \sqrt{\omega/\hat q}$. 
+%Gluons with the longest formation time $\tform= L$, carry energy $\omega_c \sim \hat q L^2$.
+%%Reciprocally, $k_{\rm f}^2 \sim \sqrt{\hat q \omega}$ or, in terms of emission angle, $\theta_{\rm f}(\omega) \sim (\hat q/\omega^3)^{\onefourth}$. 
+%%The spectrum of emitted gluons per unit of energy is therefore
+%%\beq
+%%\label{eq:BDMPS-spectrum}
+%%\dd {\cal P}_{\rm med} = 2 \frac{\alpha_s C_{\tiny R}}{\pi} \frac{L}{\tform(\omega)}\frac{\dd \omega}{\omega} \,,
+%%\eeq
+%%for $\tform \ll L$ or, in other words, $\omega \ll \omega_c$, where $\omega_c \sim \hat q L^2$. 
+%This energy scale also acts as an effective cut-off scale, as for $\omega > \omega_c$ the spectrum is strongly suppressed (LPM suppression). It also determines a ``minimal'' angle for gluon emission due to multiple scattering, denoted $\theta_{\rm f}(\omega_c) \sim (\hat q L^3)^{-\onehalf}$, that we already encountered as a minimal angle for coherence in the discussion above.
+%%Hence, LPM radiation contributes maximally along the line $\tform \sim \tdecoh$. 
+%It involves formation times longer than the decoherence time $\tform \gtrsim \tdecoh$, which implies $k_{\rm f} \lesssim \sqrt{\hat q \omega}$, and angles $\theta > \theta_c$. Furthermore, the multiplicity of LPM gluons becomes large in the soft sector, in particular at $\omega \lesssim \alpha_s^2 \omega_c$. In this regime, resummation of multiple medium-induced gluons is necessary.
+%
+%This medium-induced radiative component is expected to enhance the yield around $\tform \sim \tdecoh$. It is however worth keeping in mind that due to broadening and subsequent splitting, it is expected that these quanta will be effectively transported out of the jet cone. What remains is therefore a residual impact of ``energy loss'' that affects the vacuum like branchings inside the medium, see \autoref{sec:phasespace-mc} for results from in-medium Monte Carlo showers.
+%
+%In addition to the (relatively) soft emissions that are sensitive to multiple scattering, there arises a radiative component from rare, hard kicks in the medium. This component is formally higher-twist, i.e. scales as $\sim k_\perp^{-4}$, and has to be induced inside the medium, $\tform < L$. It is however subleading to the the LPM emissions that dominate close to the line $\tform \sim \tdecoh$.
+%These emissions will typically not undergo further splittings and can contribute to the intra-jet distribution. 
 
-Now let us briefly review the possible additional radiative channels that are opened due to interactions with the medium. It is important to stress that the emission probability for medium-induced radiation, such as Eq.~(\ref{eq:vacuum-phase-space}) for the vacuum radiation, does not factorize in the same way. Hence, the phase space in the Lund diagram is not anymore uniformly filled. 
+Generalizing this schematic picture to multiple splittings in the medium is largely an open theoretical question, with some recent progress \cite{Mehtar-Tani:2017web,Caucal:2018dla}.
+%To summarize, from perturbative arguments regarding medium-induced radiative processes we expect to observe large medium-effects in the region marked by green in \autoref{fig:PS1}.
+However, our discussion has so far not taken into consideration important effects related to in-medium transverse momentum broadening or momentum conservation in medium interactions, which so far only are modeled in state-of-the-art Monte Carlo parton shower generators, e.g. such as JEWEL \cite{Zapp:2011ya,Zapp:2012ak}.
+%, which overlaps with the region where LPM radiation is abundant. 
+%In the absence of medium interactions, the theoretical expectation is approximately reproduced by vacuum Monte Carlo showers, see \autoref{sec:iterative-declustering} for more details. 
+A direct comparison with fully-fledged dynamical models, employed in \autoref{sec:phasespace-mc}, is still not directly applicable. We hope, nevertheless, that this discussion serves as a useful sketch for separating out regimes dominated, within the scope of the current discussion, by widely different physical mechanisms.
 
-Let us firstly describe the multiple scattering regime. It applies to situations when, in course of their formation, induced gluons experience transverse momentum broadening, approximated by $\langle k_\perp^2 \rangle \lesssim \hat q \tform$, see e.g. \cite{Kurkela:2014tla} for a more thorough discussion. We can invert this relation to find that the formation time of the emitted particles becomes $\tform(\omega) \sim \sqrt{\omega/\hat q}$. 
-Gluons with the longest formation time $\tform= L$, carry energy $\omega_c \sim \hat q L^2$.
-%Reciprocally, $k_{\rm f}^2 \sim \sqrt{\hat q \omega}$ or, in terms of emission angle, $\theta_{\rm f}(\omega) \sim (\hat q/\omega^3)^{\onefourth}$. 
-%The spectrum of emitted gluons per unit of energy is therefore
-%\beq
-%\label{eq:BDMPS-spectrum}
-%\dd {\cal P}_{\rm med} = 2 \frac{\alpha_s C_{\tiny R}}{\pi} \frac{L}{\tform(\omega)}\frac{\dd \omega}{\omega} \,,
-%\eeq
-%for $\tform \ll L$ or, in other words, $\omega \ll \omega_c$, where $\omega_c \sim \hat q L^2$. 
-This energy scale also acts as an effective cut-off scale, as for $\omega > \omega_c$ the spectrum is strongly suppressed (LPM suppression). It also determines a ``minimal'' angle for gluon emission due to multiple scattering, denoted $\theta_{\rm f}(\omega_c) \sim (\hat q L^3)^{-\onehalf}$, that we already encountered as a minimal angle for coherence in the discussion above.
-%Hence, LPM radiation contributes maximally along the line $\tform \sim \tdecoh$. 
-It involves formation times longer than the decoherence time $\tform \gtrsim \tdecoh$, which implies $k_{\rm f} \lesssim \sqrt{\hat q \omega}$, and angles $\theta > \theta_c$. Furthermore, the multiplicity of LPM gluons becomes large in the soft sector, in particular at $\omega \lesssim \alpha_s^2 \omega_c$. In this regime, resummation of multiple medium-induced gluons is necessary.
+%This concludes the physics discussion of possible radiative contributions at the level of single splitting. It is worth keeping in mind that what we have discussed so far is an idealized picture that will be complicated by the embedding the jets into correlated and un-correlated medium backgrounds. We have also neglected a set of other effects, such as medium back-reaction, that could possibly become important for realistic modeling of the jet-medium interactions. \kmt{Better wording, for further discussion see also Aleksi and Urs.}
 
-This medium-induced radiative component is expected to enhance the yield around $\tform \sim \tdecoh$. It is however worth keeping in mind that due to broadening and subsequent splitting, it is expected that these quanta will be effectively transported out of the jet cone. What remains is therefore a residual impact of ``energy loss'' that affects the vacuum like branchings inside the medium, see \autoref{sec:phasespace-mc} for results from in-medium Monte Carlo showers.
-
-In addition to the (relatively) soft emissions that are sensitive to multiple scattering, there arises a radiative component from rare, hard kicks in the medium. This component is formally higher-twist, i.e. scales as $\sim k_\perp^{-4}$, and has to be induced inside the medium, $\tform < L$. It is however subleading to the the LPM emissions that dominate close to the line $\tform \sim \tdecoh$.
-These emissions will typically not undergo further splittings and can contribute to the intra-jet distribution. 
-
-To summarize, from perturbative arguments regarding medium-induced radiative processes we expect to observe large medium-effects in the region marked by green in \autoref{fig:PS1}, which overlaps with the region where LPM radiation is abundant. In the absence of medium interactions, the theoretical expectation is approximately reproduced by vacuum Monte Carlo showers, see \autoref{sec:iterative-declustering} for more details. In \autoref{sec:phasespace-mc} we compare our theoretical expectation with models that implement medium modifications. This concludes the physics discussion of possible radiative contributions at the level of single splitting. It is worth keeping in mind that what we have discussed so far is an idealized picture that will be complicated by the embedding the jets into correlated and un-correlated medium backgrounds. We have also neglected a set of other effects, such as medium back-reaction, that could possibly become important for realistic modeling of the jet-medium interactions. \kmt{Better wording, for further discussion see also Aleksi and Urs.}
-
-\kmt{How to generalize to many splittings? How to connect this section to the rest? In principle, the main effect in the map is running of $\alpha_s$. A secondary (higher-order) effect comes from accumulating soft radiation, contribution scales as $\alpha_s\times$(log-phase space of father).}
+%\kmt{How to generalize to many splittings? How to connect this section to the rest? In principle, the main effect in the map is running of $\alpha_s$. A secondary (higher-order) effect comes from accumulating soft radiation, contribution scales as $\alpha_s\times$(log-phase space of father).}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Filling the map from reclustered of jets}
@@ -175,6 +229,7 @@ Alternative reclustering strategies can however be used, although it would disto
 In the case of the $k_{\rm \tiny T}$-algorithm, the softest particles are clustered first. As a consequence, the last reclustering step will merge hard splittings. The anti-$k_{\rm \tiny T}$ clusters hard particles first, thus splittings at the last reclustering steps will be generally soft. 
 %Such ordering is reflected in the Lund plots of \autoref{fig:AlgoDependence}.
 
+The figures produced in this report were built using the code at \cite{LundFromMC}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
