@@ -13,7 +13,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Jets are multi-particle objects and are experimentally accessed by assembling measured tracks and calorimeter energy deposition, or a combination of both, according to a jet algorithm. In the context of perturbative QCD, multiple splittings inside the jet cone have to be taken into account due to the mass singularity of QCD. 
+Jets are multi-particle objects and are experimentally accessed by assembling measured tracks or calorimeter energy deposition, or a combination of both, according to a jet algorithm. In the context of perturbative QCD, multiple splittings inside the jet cone have to be taken into account due to the mass singularity of QCD. 
 In the medium, these splittings happen concurrently with, and are affected by, final-state interactions with the surrounding medium. It is therefore worth considering how medium scales, related to the size\footnote{For simplicity, in this section we treat the medium as static, where all jets traverse the same length $L$.} and local medium properties, will have an impact on the phase space of jet observables. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +55,7 @@ where
 $\kT = z(1-z) E \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
 This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. 
 %In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
-The Lund diagram exists in various form, the common feature being that the variables spanning the plane exploit the logarithmic phase space due to the soft, $1/z$, and collinear, $1/\theta$, divergences of typical QCD splittings (except $g \to q\bar q $).
+The Lund diagram exists in various forms, the common feature being that the variables spanning the plane exploit the logarithmic phase space due to the soft, $1/z$, and collinear, $1/\theta$, divergences of typical QCD splittings (except $g \to q\bar q $).
 In the soft and collinear limit, usually referred to as the double-logarithmic regime, the differential probability $\dd P$ of 
 %emission of a gluon 
 {\sl one} splitting is given by \cite{Dokshitzer:1991wu,Ellis:1991qj}
@@ -106,7 +106,7 @@ Solving $t = \tform$, results in a line parametrized by
 with a positive, unit slope in the plane.
 Hence, each splitting in \autoref{fig:PS0} (right) happens approximately at $t_{\text{f},i}$ ($i=\{1,2,3\}$). This representation is particularly useful when considering branchings in the presence of a spatially extended density of scattering centers.
 
-Turning now to medium effects, it is most natural to consider which of the splittings happen inside a medium of length $L$.  The line corresponding to $\tform = L$ is found by substituting $t = L$ in \eqref{eq:FormationTimeLund}, and is also represented in \autoref{fig:PS1}, where we have chosen a particular value for $L$. Hence, the area above the line marked $\tform = L$ correspond to emissions that occur inside the medium. Emissions with $\tform > L$ occupy the region below the line.
+Turning now to medium effects, it is most natural to consider which of the splittings happen inside a medium of length $L$.  The line corresponding to $\tform = L$ is found by substituting $t = L$ in \eqref{eq:FormationTimeLund}, and is also represented in \autoref{fig:PS1}, where we have chosen a particular value for $L$. Hence, the area above the line marked $\tform = L$ corresponds to emissions that occur inside the medium. Emissions with $\tform > L$ occupy the region below the line.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -197,7 +197,7 @@ A direct comparison with fully-fledged dynamical models, employed in \autoref{se
 
 The generalization of this picture to multiple emissions is more delicate. In vacuum, subsequent emissions are self-similar (apart from the running of $\alpha_s$) which allows to iterate the splitting process with the jet opening angle R replaced by the splitting angle of the parent dipole (angular ordering) \cite{Ellis:1991qj,Dokshitzer:1991wu}. 
 
-In order to connect theory with experimental observables, one relies on an operational definition of what a jet is \cite{Salam:2009jx}. Such procedures cluster the final-state stable particles using sequential recombination algorithms, e.g. as implemented in FastJet \cite{Cacciari:2005hq,Cacciari:2011ma}. Final state particles $i$ and $j$ are assigned a mutual distance $d_{ij}$ and a distance to the beam $d_{i\rm B}$. The pair with the smallest distance are recombined first, and the algorithm repeats until the distance to the beam is the smallest quantity. In this case, the algorithm terminates labelling $i$ a jet. The distance metric is generally defined as
+In order to connect theory with experimental observables, one relies on an operational definition of what a jet is \cite{Salam:2009jx}. Such procedures cluster the final-state stable particles using sequential recombination algorithms, e.g. as implemented in FastJet \cite{Cacciari:2005hq,Cacciari:2011ma}. Final state particles $i$ and $j$ are assigned a mutual distance $d_{ij}$ and a distance to the beam $d_{i\rm B}$. The pair with the smallest distance is recombined first, and the algorithm repeats until the distance to the beam is the smallest quantity. In this case, the algorithm terminates labelling $i$ a jet. The distance metric is generally defined as
 \begin{align}
 \label{eq:JetDistanceMetric}
 d_{ij} &= \min\left(p_{{\rm \tiny T},i}^{2\alpha},p_{{\rm \tiny T},j}^{2\alpha} \right) \frac{\Delta R_{ij}^2}{R^2} \,, \\
@@ -218,12 +218,14 @@ During the workshop, we have however studied aspects using all three recombinati
 
 In order to extract relevant information from a sample of real (simulated) jets, we apply the following procedure.
 %Uncovering this sequence of splittings should be in close correspondence to filling the Lund diagram using the following procedure. 
-For a given jet in the sample, fill the Lund diagram by
+For a given jet in the sample,
 \begin{description}
 \item[1)] build a history of splittings by reclustering a jet with a given reclustering algorithm,
 \item[2)] at each branching, extract the variables $z$ and $\theta$. Here, we define $z \equiv z_\text{rel} = p_{t,j_2}/(p_{t,j_1}+p_{t,j_2})$ and use $\log(z \Delta R_{j_1 j_2}/R)$ as the quantity on the $y$-axis, where $j_i$ ($i=1,2$) refer to two branches of the tree.
 %\footnote{We thank G.~Salam for a discussion on this point.} 
-This definition of $z$ has the property that it always reflects the momentum sharing within that  specific step.
+This definition of the variable $z$ has the property that it always reflects the momentum sharing within the local branching (see also the description at \cite{LundFromMC}).
+
+\item[3)] enter point in Lund diagram.
 
 \end{description}
 %The Lund plane is thus populated for a sample of jets.
@@ -248,7 +250,7 @@ In the case of the $k_{\rm \tiny T}$-algorithm, the softest particles are cluste
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Using this procedure for the three different reclustering algorithms, we analyzed a sample of jet generated by PYTHIA8 in \autoref{fig:PS2Vac}.\footnote{The figures produced in this report were built using G. Salam's code at \cite{LundFromMC}.
-} The jet sample corresponds to reconstructed anti-$k_{\rm \tiny T} = 0.4$ jets with $\pT > 200 $ GeV. The expected, simple features are nicely realized for the C/A reclustering, see \autoref{fig:PS2Vac} (left).\footnote{Some features near the edges of the figure are artifacts related to the use of anti-$\kT$ jets. We appreciate the discussion with the authors of \cite{Dreyer:2018lund} about these aspects.} In particular, we see a slow enhancement of radiation with increasing $\kT$ that can mainly be attributed to running-coupling effects. The additional features, e.g. at large angles, can be attributed to effects from the underlying event that was not subtracted in this sample. Indeed, the maps generated by the (anti-)$k_{\rm \tiny T}$ reclustering are not uniform and possess and enhanced sensitivity to collinear, \autoref{fig:PS2Vac} (center), and soft, large-angle configurations, \autoref{fig:PS2Vac} (right), as naively expected.
+} \kmt{Which version/tune of PYTHIA8 was used?} The jet sample corresponds to reconstructed anti-$k_{\rm \tiny T} = 0.4$ jets with $\pT > 200 $ GeV. The expected, simple features are nicely realized for the C/A reclustering, see \autoref{fig:PS2Vac} (left).\footnote{Some features near the edges of the figure are artifacts related to the use of anti-$\kT$ jets. We appreciate the discussion with the authors of \cite{Dreyer:2018lund} about these aspects.} In particular, we see a slow enhancement of radiation with increasing $\kT$ that can mainly be attributed to running-coupling effects. The additional features, e.g. at large angles, can be attributed to effects from the underlying event that was not subtracted in this sample. Indeed, the maps generated by the (anti-)$k_{\rm \tiny T}$ reclustering are not uniform and possess and enhanced sensitivity to collinear, \autoref{fig:PS2Vac} (center), and soft, large-angle configurations, \autoref{fig:PS2Vac} (right), as naively expected.
 See also \autoref{sec:reclusteringalgo} for a further discussion in the context of grooming studies.
 
 As pointed out before, medium-induced radiation does not per se follow the same (angular) ordering as described above. In fact, the resummation of soft radiation leads to quite different characteristics. We will however continue to apply the procedure outlined above to identify regions of particular medium modification in the following Section. 
@@ -299,13 +301,13 @@ The lower plots show the differences to the corresponding vacuum diagrams.
 
 It is also important to keep in mind that there is a significant migration between $\pT$ bins in heavy-ion collisions, widely understood as the effect of jet energy-loss.
 
-The results from QPYTHIA exhibit an modest excess $\sim 10\%$ of hard quanta relative to vacuum, see \autoref{fig:PS2} (lower, left). In the model, the number of splittings is increased relative to vacuum leading to a significant intra-jet momentum broadening at scales corresponding to very short formation times.
+The results from QPYTHIA exhibit a modest excess $\sim 10\%$ of hard quanta relative to vacuum, see \autoref{fig:PS2} (lower, left). In the model, the number of splittings is increased relative to vacuum leading to a significant intra-jet momentum broadening at scales corresponding to very short formation times.
 %\sout{JEWEL generates additional medium-induced branchings that are not present in the vacuum reference. These are also allowed to branch further in the medium. In the difference plot we can clearly identify an excess $\sim 20\%$ of large-angle, semi-hard quanta in JEWEL, see \autoref{fig:PS2} (lower, center). This excess shows up at larger $k_\perp$ and is further enhanced $\sim 30\%$ when medium recoils are included, see Fig.~\ref{fig:PS2} (lower, right). }
 %{\color{green} 
 In the case of JEWEL, the difference plot exhibits only a mild increase of splittings at moderate $\kT$ and a small suppression $\sim 6\%$ of hard quanta, see \autoref{fig:PS2} (lower, center). This suppression is consistent with a lack of strong intra-jet broadening and a more collimated fragmentation. 
 This shows that the realistic modifications to the Lund diagram are highly non-trivial and calls for a better theoretical understanding, see \autoref{sec:phasespace-theory} for a discussion.
 When the medium recoils are included, a significant excess of large-angle quanta is reconstructed, see \autoref{fig:PS2} (lower, right). 
-We note that in our declustering approach the angles are always measured relative to the hardest parent or subjet, in which case the angular distribution can be broader than the angular distribution measured relative to the jet axis that is used to compute jet profiles , see for instance \cite{KunnawalkamElayavalli:2017hxo}.
+We note that in our declustering approach the angles are always measured relative to the hardest parent or subjet, in which case the angular distribution can be broader than the angular distribution measured relative to the jet axis that is used to compute jet profiles, see for instance \cite{KunnawalkamElayavalli:2017hxo}.
 %}
 %{\color{red} What is the interpretation of the enhancement/suppression wrt vacuum seen in QPYTHIA/JEWEL? How can we understand this in light of the discussion in Sec.~2 and Fig. 3? How do long-distance effects (broadening, recoil(?)) show up in the plane and ``ruin'' the space-time interpretation? How is energy loss affecting the plot? What would be the next step - more systematic studies, grooming studies of models, gen-level studies etc.!}
 We also note that the concept of formation time, as defined in \eqref{eq:FormationTime}, does not apply to these particles since they are collimated with the jet through elastic scattering and not per se part of the branching process.
@@ -313,7 +315,7 @@ We also note that the concept of formation time, as defined in \eqref{eq:Formati
 %The nature and role of the recoils will be explained in the next subsection. 
 
 It is worth pointing out that the medium-induced signal populates different regions of phase space in the two jet quenching models. 
-While these features ultimately will be reflected in the relevant observables, the mapping onto the kinematical Lund plane seem to be a powerful tool to identify the impact of various medium modifications. Performing additional grooming, that is picking out branchings with specific properties, allows to enhance the sensitivity to the signal depending on the grooming parameters, see \autoref{sec:jetsubstructure}. Furthermore, changing the reclustering algorithm could also boost the signal, cf. \autoref{fig:PS2Vac}.
+While these features ultimately will be reflected in the relevant observables, the mapping onto the kinematical Lund plane seems to be a powerful tool to identify the impact of various medium modifications. Performing additional grooming, that is picking out branchings with specific properties, allows to enhance the sensitivity to the signal depending on the grooming parameters, see \autoref{sec:jetsubstructure}. Furthermore, changing the reclustering algorithm could also boost the signal, cf. \autoref{fig:PS2Vac}.
 %In Fig. \ref{fig:AlgoDependenceSignal}, left plot, the difference between JEWEL (recoils off) and vacuum is shown for k$_{T}$ declustering strategy. The similar plot for QPYTHIA is shown on the right plot. 
 %\sout{We have seen that, in the case of JEWEL, the excess of large-angle splittings is of the same order of magnitude with C/A and $k_{\rm \tiny T}$ strategies. In the case of QPYTHIA, the excess of hard splittings is enhanced to $\sim 20\%$ with $k_{\rm \tiny T}$ reclustering.}
 %{\color{green} 
@@ -321,7 +323,7 @@ We have observed that, in the case of JEWEL, the suppression of hard splittings 
 
 The impact of the recoils as modeled by JEWEL has been extensively documented \cite{KunnawalkamElayavalli:2017hxo,Milhano:2017nzm}. Its contribution is needed to describe most of the jet shapes measured so far at the LHC. In particular, if the medium response can smear the subleading subjet momentum above the given grooming cut, the subjet momentum balance or $z_{g}$ can become more asymmetric relative to vacuum.   As a correlated background, the medium response cannot be experimentally subtracted to isolate purely radiative modifications to the jet shower. However, a cross-correlation of jet substructure observables might help to suppress its influence \cite{Milhano:2017nzm}.
 
-It is worth noting that, albeit in a complicated form, the splitting map contains of the information about a given medium shower. Certainly, such a procedure can be directly applied to experimental data, apart from the aspect of uncorrelated background that we outline in the next Section. Hence, in the remaining part of the report, the observables we choose to analyze will reflect particular features that already appear in the splitting map.
+It is worth noting that, albeit in a complicated form, the splitting map contains all of the information about a given medium shower. Certainly, such a procedure can be directly applied to experimental data, apart from the aspect of uncorrelated background that we outline in the next Section. Hence, in the remaining part of the report, the observables we choose to analyze will reflect particular features that already appear in the splitting map.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -347,9 +349,9 @@ This model randomly generates massless particles with uniform distribution at ce
 
 Hence, ending this section, we point out the fragility of using the Lund kinematical diagram in a realistic, noisy environment.
 The heavy ion background that is uncorrelated to the jet will typically populate the phase space in the form of soft splittings at large angle $\theta \sim R$, where the area is maximal. Depending on the considered jet $p_{T}$, these fake splittings can contribute significantly to the distribution of groomed observables, cf. \autoref{sec:jetsubstructure}, by enhancing the number of asymmetric splittings and inducing a strong modification relative to vacuum jets. 
-\autoref{fig:UncorrelatedBkg} shows the Lund diagram filled iteratively with PYTHIA jets embedded into a thermal background (left) and the difference plot to PYTHIA (right) where the latter clearly exhibits the enhancement of uncorrelated splittings at large angles. 
+\autoref{fig:UncorrelatedBkg} shows the Lund diagram filled iteratively with PYTHIA jets embedded into a thermal background (left) and the difference plot to PYTHIA (right) where the latter clearly exhibits the enhancement of uncorrelated splittings at large angles after average background subtraction using constituent subtraction method \cite{Berta:2014eza}, see also \autoref{app:background} for more details. 
 %Superimposed to the plot, the black line with negative slope sets the limits for the subsample of splittings that would be selected by grooming with default parameters and highlights the fraction of fake splittings that would enter the $z_{g}$ calculation. The plot on the right is filled with jets at lower energies and shows that the impact of the uncorrelated background increases as expected.
-This provides a hint that, no matter the grooming settings, uncorrelated background becomes a significant contribution to the observable the smaller the $\pT$ and significantly contaminates the angular resolution in the unfolding.
+This provides a hint that uncorrelated background becomes a significant contribution to the observable the smaller the $\pT$ and significantly contaminates the angular resolution in the unfolding.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -360,13 +362,17 @@ This provides a hint that, no matter the grooming settings, uncorrelated backgro
 {figures/LundMC/FinalPlots/Jewel_MedEmb_RecoilOff.pdf}
 \includegraphics[width=0.32\textwidth]
 {figures/LundMC/FinalPlots/Jewel_MedEmb_RecoilOn.pdf}\\
-%\includegraphics[width=0.32\textwidth]
+\includegraphics[width=0.32\textwidth]
 %{figures/LundMC/QPythiaEmbeddedDiff}
-%\includegraphics[width=0.32\textwidth]
+{figures/LundMC/QPythiaMedVacDiffEmbedded}
+\includegraphics[width=0.32\textwidth]
 %{figures/LundMC/Jewel_EmbDiff_RecoilOff}
-%\includegraphics[width=0.32\textwidth]
+{figures/LundMC/JewelMedVacEmbedded}
+\includegraphics[width=0.32\textwidth]
 %{figures/LundMC/Jewel_EmbDiff_}
+{figures/LundMC/JewelMedVacEmbeddedRecoilsOn}
 \caption{Impact of the uncorrelated background in the splitting map of the medium parton showers QPYTHIA and JEWEL. 
+Upper row: medium-modified MC models embedded in background. Lower row: difference between  embedded medium and vacuum showers.
 %Upper row shows the resulting splitting map when embedding the modeled showers in a background. 
 %Lower row shows the difference of the showers with and without embedding.
 %\kmt{Point out that there was background subtraction step performed here (Leticia, is it CS of area-based?).}
@@ -375,7 +381,7 @@ This provides a hint that, no matter the grooming settings, uncorrelated backgro
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 As expected, a generic enhancement of large-angle activity is a prominent feature for the in-medium showers as well.
-Similar plots as discussed above are shown for embedded QPYTHIA and JEWEL showers in \autoref{fig:UncorrelatedBkgSignal}. 
+Similar plots as discussed above are shown for embedded QPYTHIA and JEWEL showers in \autoref{fig:UncorrelatedBkgSignal} (upper row). 
 %The upper row correspond to QPYTHIA, JEWEL ``Recoils Off'' and JEWEL ``Recoils on'' embedded onto a thermal background. 
 %The lower plot show the difference of the splitting map before and after embedding. 
-Strikingly, all three plots share a similar dominant feature at large angles. This is confirmed by subtracting the generator-level events from the embedded ones. However, we observe that after embedding, the difference to the vacuum reference (also embedded) is still significant, meaning that the differences in the fragmentation pattern from different generators survive the presence of an underlying event, albeit with significant distortions.
+Strikingly, all three plots share a similar dominant feature at large angles. This is confirmed by subtracting the generator-level events from the embedded ones. However, we observe that after embedding, the difference to the vacuum reference (also embedded) is still significant for most cases, see \autoref{fig:UncorrelatedBkgSignal} (lower row), meaning that the differences in the fragmentation pattern from different generators survive the presence of an underlying event, albeit with significant distortions.
