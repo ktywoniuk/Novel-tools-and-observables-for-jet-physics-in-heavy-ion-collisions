@@ -14,7 +14,7 @@
 
 
 Jets are multi-particle objects and are experimentally accessed by assembling measured tracks or calorimeter energy deposition, or a combination of both, according to a jet algorithm. In the context of perturbative QCD, multiple splittings inside the jet cone have to be taken into account due to the mass singularity of QCD. 
-In the medium, these splittings happen concurrently with, and are affected by, final-state interactions with the surrounding medium. It is therefore worth considering how medium scales, related to the size\footnote{For simplicity, in this section we treat the medium as static, where all jets traverse the same length $L$.} and local medium properties, will have an impact on the phase space of jet observables. 
+In the medium, these splittings happen concurrently with, and are affected by, final-state interactions with the surrounding medium. It is therefore worth considering how medium scales, related to the size\footnote{For simplicity, in this section we treat the medium as static, where all jets traverse the same length $L$.} and local medium properties, will have an impact on the variety of jet observables. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -34,10 +34,10 @@ Working in the small-angle limit, and denoting by $z$ the energy sharing fractio
 \beq
 \label{eq:DipoleMass}
 %M^2 = z(1-z)\pT^2 \theta^2 \,,
-M^2 = z(1-z) E^2 \theta^2 \,,
+M^2 = z(1-z) \pT^2 \theta^2 \,,
 \eeq
 %for small angles $\theta$, 
-where $E$ is the total momentum of the dipole.
+where $\pT$ is the total momentum of the dipole, corresponding roughly to the transverse momentum in the detector.
 %longitudinal momentum of the parent parton, 
 %see Eq.~(\ref{eq:vacuum-phase-space}). 
 The characteristic time-scale of the splitting is usually referred to as the \textsl{formation} time, and is related to the 
@@ -47,13 +47,13 @@ $\tform \sim \Delta E^{-1}$. It is explicitly given by
 \beq
 \label{eq:FormationTime}
 %\tform = \frac{2 z(1-z)\pT }{k_\perp^2} = \frac{2 \pT}{M^2} \,,
-\tform = \frac{2 z(1-z)E }{\kT^2} = \frac{2 E}{M^2} \,,
+\tform = \frac{2 z(1-z)E }{\kT^2} = \frac{2 \pT}{M^2} \,,
 %(z \pT \theta^2)^{-1} \,,
 \eeq
 where 
 %$k_\perp = z(1-z)\pT \theta$, in the small angle limit, is the relative transverse momentum of the splitting. 
-$\kT = z(1-z) E \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
-This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. 
+$\kT = z(1-z) \pT \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
+This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (\pT/M)$. 
 %In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
 The Lund diagram exists in various forms, the common feature being that the variables spanning the plane exploit the logarithmic phase space due to the soft, $1/z$, and collinear, $1/\theta$, divergences of typical QCD splittings (except $g \to q\bar q $).
 In the soft and collinear limit, usually referred to as the double-logarithmic regime, the differential probability $\dd P$ of 
@@ -63,41 +63,15 @@ In the soft and collinear limit, usually referred to as the double-logarithmic r
 \label{eq:vacuum-phase-space}
 \dd P = 2\frac{\alpha_s C_i}{\pi}\, \dd \log z\theta \, \dd \log\frac{1}{\theta} \,,
 \eeq
-in terms of its kinematical variables, approximating $\kT \approx z E \theta$, and
+in terms of its kinematical variables, approximating $\kT \approx z \pT \theta$, and
 %where $z$ and $\theta$ are the energy sharing fraction of and angle between the constituents of a dipole
 %the gluon that is emitted off a projectile parton 
 in arbitrary color representation ($C_i=C_F$ for quark and $C_i = N_c$ for gluon splitting, respectively). Due to the self-similar nature of the phase space \eqref{eq:vacuum-phase-space}, the effect of {\sl multiple} splittings corresponds to higher-order corrections.\footnote{For a given phase space point with $\{z,\theta\}$, the feed-down contribution from one additional splitting yields a contribution $\sim \mathcal{O}\big(\alpha_s^2 \ln (1/z) \ln (R/\theta)\big)$ which contributes at higher-logarithmic order.} Hence, the area spanned below the line $z=1$, see \autoref{fig:PS0} (left), is uniformly populated by emissions with the weight $2\alpha_s C_i/\pi$ where emissions can take place up to the jet opening angle $R$. The density at fixed $\kT$ is mainly modulated by running coupling effects, down to the QCD scale, $\kT \sim \Lambda_\text{\tiny  QCD}$, where non-perturbative effects will dominate. 
-%The radiation can take place up to the jet opening angle $R$.
-In \autoref{fig:PS0} (left) we have also explicitly denoted out the regimes of soft, large-angle  and hard, collinear radiation. 
+In \autoref{fig:PS0} (left) we have also explicitly denoted the regimes of soft, large-angle  and hard, collinear radiation. 
 
-%For future reference, it is worth keeping in mind that lines at fixed transverse momentum are horizontal, lines at fixed angle vertical, lines at fixed formation time diagonal with a positive unit slope, and lines at fixed energy diagonal with a negative unit slope in this diagram. 
-%\kmt{What are the axes in the plot we are producing ($\ln\kT/E$ and $\ln R/\theta$)? Where do you hit the non-perturbative regime?}
-%Before discussing any additional elastic or inelastic processes arising by the presence of a medium, one could consider the fate of vacuum emissions given a certain medium size. 
-%It can most naively be compared with the time it takes for a original parton to split into two daughter partons of invariant mass 
-%\beq
-%\label{eq:DipoleMass}
-%%M^2 = z(1-z)\pT^2 \theta^2 \,,
-%M^2 = z(1-z) E^2 \theta^2 \,,
-%\eeq
-%for small angles $\theta$, where $E$ is the total momentum of the dipole
-%%longitudinal momentum of the parent parton, 
-%see Eq.~(\ref{eq:vacuum-phase-space}). This time-scale is usually referred to as the \textsl{formation time}, and is related to the uncertainty of the time-scale of splitting $\tform \sim \Delta E^{-1}$, and is explicitly given by
-%\beq
-%\label{eq:FormationTime}
-%%\tform = \frac{2 z(1-z)\pT }{k_\perp^2} = \frac{2 \pT}{M^2} \,,
-%\tform = \frac{2 z(1-z)E }{\kT^2} = \frac{2 E}{M^2} \,,
-%%(z \pT \theta^2)^{-1} \,,
-%\eeq
-%where 
-%%$k_\perp = z(1-z)\pT \theta$, in the small angle limit, is the relative transverse momentum of the splitting. 
-%$\kT = z(1-z) E \theta$ is the (relative) transverse momentum of the dipole in the small angle limit. 
-%This formula can easily be understood as the time-scale for decaying in the rest frame of the parent times its boost factor $\sim (1/M) \times (E/M)$. In the following, we will only consider soft radiation and neglect additional numerical factors to write $\tform \sim (z E \theta^2)^{-1} $.
-
-For a full-fledged jet, the diagram is built up by mapping every branching to a point on the Lund plane. In \autoref{fig:PS0} (right), we illustrate how to fill this plane for multiple, {\sl primary} emissions off the main branch---in the illustrated case, three. Resolving subsequent splittings along the primary branches will, in turn, generate new, orthogonal Lund planes, and so on. Simplifying the graphical representation, these planes are ultimately collapsed onto the original one. Due to the strong ordering of emissions in the double-logarithmic regime, especially in angles, the emissions are roughly evenly distributed in the splitting variables.
+For a full-fledged jet, the diagram is built up by mapping every branching to a point on the Lund plane. In \autoref{fig:PS0} (right), we illustrate how to fill this plane for multiple, {\sl primary} emissions off the main branch---three in the illustrated case. Resolving subsequent splittings along the primary branches will, in turn, generate new, orthogonal Lund planes, and so on. Simplifying the graphical representation, these planes are ultimately collapsed onto the original one. Due to the strong ordering of emissions in the double-logarithmic regime, especially in angles, the emissions are roughly evenly distributed in the splitting variables.
 
 Each point in the diagram is uniquely associated with a specific formation time $\tform$ that is a proxy for the physical time $t$ when a splitting can be resolved.
-%Coming back to the diagram, let us identify emissions that happened inside the medium or, in other words, formation times that are shorter than the medium length ($\tform < L$). 
-%This condition results in an area on the Lund diagram delimited by the line solving $\tform = L$,
 Solving $t = \tform$, results in a line parametrized by
 \beq
 \label{eq:FormationTimeLund}
@@ -112,7 +86,8 @@ Turning now to medium effects, it is most natural to consider which of the split
 \begin{figure}
 \centering
 %\includegraphics[width=0.5\textwidth]{figures/kinematics/plotVac}%
-\includegraphics[width=0.6\textwidth]{figures/kinematics/lund_regions_colored}%
+%\includegraphics[width=0.6\textwidth]{figures/kinematics/lund_regions_colored}%
+\includegraphics[width=0.6\textwidth]{figures/kinematics/LundDiagram_details_cropped}%
 %\includegraphics[width=0.5\textwidth]{figures/kinematics/plotMed}
 \caption{Lund diagram for vacuum radiation with inclusion of relevant medium scales related to creation and decoherence of partons in the medium. The parameters are $\hat q = $ 2 GeV$^2$/fm, L = 2 fm and $p_{\scriptscriptstyle T}$ = 300 GeV. 
 %Right: Lund diagram for medium induced radiation.
@@ -121,24 +96,21 @@ Turning now to medium effects, it is most natural to consider which of the split
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Providing a comprehensive overview of models of medium interactions proposed in the literature is beyond the scope of this report. Instead, we consider for the moment a well-known picture that shares commonalities between a wide class of approaches by assuming that all propagating particles experience diffusive momentum broadening. The amount of accumulated momentum is characterized by the diffusion relation $\langle \kT^2 \rangle = \hat q t$, where $t$ corresponding to the time of in-medium propagation and where the jet transport coefficient $\hat q$ acts as a diffusion constant in transverse space.\footnote{Here we neglect the influence of rare, hard kicks in the medium that go beyond this definition. Their discussion follows closely what we describe below, with the resolution scale $\lambda_\perp \sim q_\perp^{-1}$, where $q_\perp$ is the transverse momentum kick from the medium. We refer, e.g. to \cite{Kurkela:2014tla} for a comprehensive discussion.} 
-%While this reflects the expectation from multiple, soft interaction with a plasma and neglects rare, hard collisions, the latter can easily be incorporated into the same discussion.
 For a given splitting, with a given transverse momentum $\kT$ and formation time $\tform$, the accumulated transverse momentum $\sim \hat q \tform$ could either be small correction or a dominating contribution. The limiting line, $\kT^2 = \hat q \tform$, is parametrized by,
 \beq
 \log z\theta = \frac{1}{3} \log \frac{1}{\theta} + \log \frac{\hat q ^\onethird}{\pT} \,.
 \eeq
 Note that the slope is a factor $1/3$ smaller than in \eqref{eq:FormationTimeLund}.
-More generally, at any instance $t$ we can compare the intrinsic transverse momentum $\kT^2 \sim (\theta t)^{-2}$ to the accumulated one $\sim \hat q t$. This allows us to identify a characteristic time-scale when the two are of the same order that is usually referred to as the {\sl decoherence} time
+More generally, at any instant $t$ we can compare the intrinsic transverse momentum $\kT^2 \sim (\theta t)^{-2}$ to the accumulated one $\sim \hat q t$. This allows us to identify a characteristic time-scale when the two are of the same order that is usually referred to as the {\sl decoherence} time
 \beq
 \tdecoh \sim (\hat q \theta^2)^{-1/3} \,.
 \eeq
 Hence, the line $\tform = \tdecoh$, indicated in \autoref{fig:PS1}, divides the region above, where emissions are not resolved by medium interactions, from the region below, where the dipole splitting kinematics is dominated by diffusion.
 Also note that this broadening-dominated regime seizes to exist for decoherence times longer than the medium length, $\tdecoh \gtrsim L$. This corresponds to small dipole configurations that have a vanishing probability of ever being resolved in the medium. The condition $\tform = \tdecoh = L$ corresponds therefore to the minimal decoherence angle $\theta_c \sim (\hat q L^3)^{-\onehalf}$, see \autoref{fig:PS1}.
 
-%As is clear from \autoref{fig:PS1}, this guarantees that at angles smaller than the minimal decoherence angle $\theta_c \sim (\hat q L^3)^{-\onehalf}$, the decoherence time is automatically larger than the medium length.\footnote{Since, $\tdecoh >L$ doesn't make much sense physically, we have represented this element by a dashed line in \autoref{fig:PS1}.} 
-
 The kinematical Lund plane for {\sl one} splitting inside the medium is therefore divided into three main regimes, in addition to the possibility of fragmenting outside of the medium, $\tform > L$.
-Emissions that fall within the red area in \autoref{fig:PS1}, i.e. with $\tform< \tdecoh < L$, correspond to pure vacuum splittings inside the medium. On the other hand, in-medium splittings with $\tdecoh > L$, falling within the blue triangle in \autoref{fig:PS1}, are never resolved by medium interactions.
-Finally, whenever $\tdecoh \lesssim \tform$, see the green triangle in \autoref{fig:PS1}, the splitting kinematics is dominated by medium effects and the probability of splitting is no longer described by \autoref{eq:vacuum-phase-space}, i.e. the Lund plane is not expected to be uniformly filled. These splittings will also undergo further momentum broadening in the medium. For a comprehensive discussion of this regime, we refer to \cite{Kurkela:2014tla,Blaizot:2014rla}.
+Emissions that fall within the area marked by ``1'' (red lines) in \autoref{fig:PS1}, i.e. with $\tform< \tdecoh < L$, correspond to pure vacuum splittings inside the medium. On the other hand, in-medium splittings with $\tdecoh > L$, falling within the area marked by ``3'' (blue lines) in \autoref{fig:PS1}, are never resolved by medium interactions.
+Finally, whenever $\tdecoh \lesssim \tform$, see the area marked by ``2'' (green lines) in \autoref{fig:PS1}, the splitting kinematics is dominated by medium effects and the probability of splitting is no longer described by \autoref{eq:vacuum-phase-space}, i.e. the Lund plane is not expected to be uniformly filled. These splittings will also undergo further momentum broadening in the medium. For a comprehensive discussion of this regime, we refer to \cite{Kurkela:2014tla,Blaizot:2014rla}.
 
 %Note also that the intersection point $\tform = \tdecoh$ corresponds to emissions with a transverse momentum scale $Q_s \sim(\hat q L)^{1/2}$ and the characteristic energy $\omega_c \sim \hat q L^2$.
 %The three time-scales we have identified -- the formation time, $\tform$, the decoherence time, $\tdecoh$, and the length of the medium, $L$ -- can be arranged in three possible orderings. These are marked out on \autoref{fig:PS1} as $\tform < \tdecoh < L $ by the red area, $\tform < L < \tdecoh$ by the blue area and $\tdecoh < \tform < L$ by the green area, respectively. 
@@ -184,18 +156,18 @@ Generalizing this schematic picture to multiple splittings in the medium is larg
 However, our discussion has so far not taken into consideration important effects related to in-medium transverse momentum broadening or momentum conservation in medium interactions, which so far only are modeled in state-of-the-art Monte Carlo parton shower generators, e.g. such as JEWEL \cite{Zapp:2011ya,Zapp:2012ak}.
 %, which overlaps with the region where LPM radiation is abundant. 
 %In the absence of medium interactions, the theoretical expectation is approximately reproduced by vacuum Monte Carlo showers, see \autoref{sec:iterative-declustering} for more details. 
-A direct comparison with fully-fledged dynamical models, employed in \autoref{sec:phasespace-mc}, is therefore not directly applicable. We hope, nevertheless, that this discussion serves as a useful sketch for separating out regimes dominated, within the scope of the current discussion, by widely different physical mechanisms.
+A direct comparison with fully-fledged dynamical models, employed in \autoref{sec:phasespace-mc}, is therefore not directly applicable. We believe, nevertheless, that this discussion serves as a useful sketch for separating out regimes dominated, within the scope of the current discussion, by widely different physical mechanisms.
 
 %This concludes the physics discussion of possible radiative contributions at the level of single splitting. It is worth keeping in mind that what we have discussed so far is an idealized picture that will be complicated by the embedding the jets into correlated and un-correlated medium backgrounds. We have also neglected a set of other effects, such as medium back-reaction, that could possibly become important for realistic modeling of the jet-medium interactions. \kmt{Better wording, for further discussion see also Aleksi and Urs.}
 
 %\kmt{How to generalize to many splittings? How to connect this section to the rest? In principle, the main effect in the map is running of $\alpha_s$. A secondary (higher-order) effect comes from accumulating soft radiation, contribution scales as $\alpha_s\times$(log-phase space of father).}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Filling the map from reclustered of jets}
+\subsection{Filling the map from reclustered jets}
 \label{sec:iterative-declustering}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The generalization of this picture to multiple emissions is more delicate. In vacuum, subsequent emissions are self-similar (apart from the running of $\alpha_s$) which allows to iterate the splitting process with the jet opening angle R replaced by the splitting angle of the parent dipole (angular ordering) \cite{Ellis:1991qj,Dokshitzer:1991wu}. 
+As already pointer out above, the generalization of this picture to multiple emissions is more delicate. In vacuum, subsequent emissions are self-similar (apart from the running of $\alpha_s$) which allows to iterate the splitting process with the jet opening angle R replaced by the splitting angle of the parent dipole (angular ordering) \cite{Ellis:1991qj,Dokshitzer:1991wu}. 
 
 In order to connect theory with experimental observables, one relies on an operational definition of what a jet is \cite{Salam:2009jx}. Such procedures cluster the final-state stable particles using sequential recombination algorithms, e.g. as implemented in FastJet \cite{Cacciari:2005hq,Cacciari:2011ma}. Final state particles $i$ and $j$ are assigned a mutual distance $d_{ij}$ and a distance to the beam $d_{i\rm B}$. The pair with the smallest distance is recombined first, and the algorithm repeats until the distance to the beam is the smallest quantity. In this case, the algorithm terminates labelling $i$ a jet. The distance metric is generally defined as
 \begin{align}
@@ -203,14 +175,13 @@ In order to connect theory with experimental observables, one relies on an opera
 d_{ij} &= \min\left(p_{{\rm \tiny T},i}^{2\alpha},p_{{\rm \tiny T},j}^{2\alpha} \right) \frac{\Delta R_{ij}^2}{R^2} \,, \\
 d_{i \rm B} &= p_{{\rm \tiny T},i}^{2\alpha} \,,
 \end{align}
-where $\Delta R_{ij}^2 = (\Delta \phi_{ij})^2 + (\Delta \eta_{ij})^2$ and $\alpha$ is a constant that defines the algortihm; $\Delta \phi_{ij}$ ($\Delta \eta_{ij}$) being the separation of the particles in azimuthal angle (pseudorapidity). In our studies, we have used the anti-$k_{\rm \tiny T}$ algorithm ($\alpha = -1$) \cite{Cacciari:2008gp}, the Cambridge/Aachen (C/A) algorithm ($\alpha = 0$) \cite{Dokshitzer:1997in,Wobisch:1998wt}, and the $k_{\rm \tiny T}$ algorithm ($\alpha = 1$) \cite{Catani:1993hr,Ellis:1993tq}.
+where $\Delta R_{ij}^2 = (\Delta \phi_{ij})^2 + (\Delta y_{ij})^2$ and $\alpha$ is a constant that defines the algorithm; $\Delta \phi_{ij}$ ($\Delta y_{ij}$) being the separation of the particles in azimuthal angle (rapidity). In our studies, we have used the anti-$k_{\rm \tiny T}$ algorithm ($\alpha = -1$) \cite{Cacciari:2008gp}, the Cambridge/Aachen (C/A) algorithm ($\alpha = 0$) \cite{Dokshitzer:1997in,Wobisch:1998wt}, and the $k_{\rm \tiny T}$ algorithm ($\alpha = 1$) \cite{Catani:1993hr,Ellis:1993tq}.
 
 Given a reconstructed jet, obtained from a full heavy-ion event, with a list of constituents belonging to it
-%, or perhaps after including a stage of additional mitigation of unwanted background, 
 one can repeat the recombination using one of the algorithms described above. 
 In this context, this is referred to as a reclustering of the jet, providing a complete hierarchical tree (aka ``history'') of the jet evolution. Substructure techniques, to be used extensively throughout this report, define observables based on the information organized in such a tree. 
-Traditionally, the C/A algorithm is preferred since it resolves the jet as a function of its angular scale. Although the $\kT$ algorithm also could be useful in these applications, it was pointed out that it is sensitive to local clusters of soft particles (so-called `junk jets') \cite{Dokshitzer:1997in}. Finally, the anti-$\kT$ algorithm will recombine particles around the hardest branch, rather than recombining individual subjets first (see, e.g., \autoref{fig:PS0} (right)) \cite{Salam:2009jx}, thus spoiling the close correspondence to a typical QCD branching history. 
-During the workshop, we have however studied aspects using all three recombination schemes, and will discuss them briefly below. This was partly motivated at the time by considering medium-modified branching algorithms with no preferred ordering variable, such as angular ordering in the vacuum. Nevertheless, we observe that the C/A algorithm seems to be most resilient and predictable, even in the presence of medium effects, and will be the default scheme applied to most of the studies performed below.
+Traditionally, the C/A algorithm is preferred since it resolves the jet as a function of its angular scale. Although the $\kT$ algorithm also could be used in these applications, it was early pointed out that it is sensitive to local clusters of soft particles (so-called `junk jets') \cite{Dokshitzer:1997in}. Finally, the anti-$\kT$ algorithm will recombine particles around the hardest branch, rather than recombining individual subjets first (see, e.g., \autoref{fig:PS0} (right)) \cite{Salam:2009jx}, thus spoiling the close correspondence to a typical QCD branching history. 
+During the workshop, we have however studied aspects using all three recombination schemes, and will discuss them briefly below. This was partly motivated at the time by considering medium-modified branching algorithms with no preferred ordering variable, analogous to the angular ordering in the vacuum. Nevertheless, we observe that the C/A algorithm seems to be most resilient and predictable, even in the presence of medium effects, and will be the default scheme applied to most of the studies performed below.
 %It is important to keep in mind that, depending on the reclustering algorithm, the information stored in the tree is only approximately related to the sequence of quark and gluon splittings that build the jet structure as understood within perturbative QCD. 
 %In vacuum, the correspondence is most reliable for the C/A algorithm due to angular odering, but for medium showers, which comprise particles that are not angular ordered, other algorithms could potentially become relevant.
 
@@ -250,7 +221,7 @@ In the case of the $k_{\rm \tiny T}$-algorithm, the softest particles are cluste
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Using this procedure for the three different reclustering algorithms, we analyzed a sample of jet generated by PYTHIA8 in \autoref{fig:PS2Vac}.\footnote{The figures produced in this report were built using G. Salam's code at \cite{LundFromMC}.
-} \kmt{Which version/tune of PYTHIA8 was used?} The jet sample corresponds to reconstructed anti-$k_{\rm \tiny T} = 0.4$ jets with $\pT > 200 $ GeV. The expected, simple features are nicely realized for the C/A reclustering, see \autoref{fig:PS2Vac} (left).\footnote{Some features near the edges of the figure are artifacts related to the use of anti-$\kT$ jets. We appreciate the discussion with the authors of \cite{Dreyer:2018lund} about these aspects.} In particular, we see a slow enhancement of radiation with increasing $\kT$ that can mainly be attributed to running-coupling effects. The additional features, e.g. at large angles, can be attributed to effects from the underlying event that was not subtracted in this sample. Indeed, the maps generated by the (anti-)$k_{\rm \tiny T}$ reclustering are not uniform and possess and enhanced sensitivity to collinear, \autoref{fig:PS2Vac} (center), and soft, large-angle configurations, \autoref{fig:PS2Vac} (right), as naively expected.
+} The jet sample corresponds to reconstructed anti-$k_{\rm \tiny T} = 0.4$ jets with $\pT > 200 $ GeV. The expected, simple features are nicely realized for the C/A reclustering, see \autoref{fig:PS2Vac} (left).\footnote{Some features near the edges of the figure are artifacts related to the use of anti-$\kT$ jets. We appreciate the discussion with the authors of \cite{Dreyer:2018nbf} about these aspects.} In particular, we see a slow enhancement of radiation with increasing $\kT$ that can mainly be attributed to running-coupling effects. The additional features, e.g. at large angles, can be attributed to effects from the underlying event that was not subtracted in this sample. Indeed, the maps generated by the (anti-)$k_{\rm \tiny T}$ reclustering are not uniform and possess and enhanced sensitivity to collinear, \autoref{fig:PS2Vac} (center), and soft, large-angle configurations, \autoref{fig:PS2Vac} (right), as naively expected.
 See also \autoref{sec:reclusteringalgo} for a further discussion in the context of grooming studies.
 
 As pointed out before, medium-induced radiation does not per se follow the same (angular) ordering as described above. In fact, the resummation of soft radiation leads to quite different characteristics. We will however continue to apply the procedure outlined above to identify regions of particular medium modification in the following Section. 
@@ -282,11 +253,11 @@ The lower panels correspond to the difference of the radiation pattern with and 
 As a demonstration of the general ideas outlined above, we fill the Lund diagram using 
 %PYTHIA 8, and 
 two QCD-based models for jet quenching, namely QPYTHIA \cite{Armesto:2009fj} and JEWEL \cite{Zapp:2011ya,Zapp:2012ak}. 
-Both models implement the possibility for medium-induced bremsstrahlung. However, only JEWEL (i) evaluates dynamically the kinematics of multiple scattering, (ii) implements additional momentum broadening of all particles and (iii) provides the possibility to track recoiling medium constituents that have interacted with the jet and, finally, includes them in the hadronization step.\footnote{Note that, in JEWEL, medium particles that interact with the jet do not interact further.} 
+Both models implement the possibility for medium-induced bremsstrahlung. However, only JEWEL (i) evaluates dynamically the kinematics of multiple scattering, (ii) implements additional momentum broadening of all particles and (iii) provides the possibility to track recoiling medium constituents that have interacted with the jet and, finally, includes them in the hadronization step.\footnote{Note, however, that in JEWEL medium particles that interact with the jet do not interact further with the medium.} 
 %Jet quenching is expected to be accompanied by recoil effects. 
 The jet-induced medium response constitutes a correlated ``background'' component that can contribute to the modifications of the measured jet substructure. Recoil effects are expected to contribute in the soft-large angle sector of the phase space, similarly to the uncorrelated underlying event, discussed further in \autoref{sec:uncorrelatedbackground}.
 %in the next section. 
-There exists also the possibility to neglect tracking the recoil particles.
+One can also neglect tracking the recoil particles altogether.
 %We refer to the two possibilities as ``Recoil on'' and ``Recoil off''. 
 For further details about the employed models, see \App{app:models}.
 % The variables $z\theta$ and $\theta$ have been reconstructed from subsequent branchings that were identified by reclustering the jet with a C/A algorithm.
@@ -295,11 +266,9 @@ For further details about the employed models, see \App{app:models}.
 
 We present first the results of generator level studies, i.e. without embedding the models into a realistic heavy-ion background.
 For the same jet criteria as in \autoref{fig:PS2Vac}, in \autoref{fig:PS2} (upper row) we plot the Lund plots generated by QPYTHIA, JEWEL without recoils and JEWEL with recoils, respectively. 
-\kmt{It should be pointed out specifically, one time, what version of JEWEL we are using, and which reference that corresponds to so that we, and the reader, can cross check our results.}
 In this particular study, we employ the C/A reclustering. 
 The lower plots show the differences to the corresponding vacuum diagrams. 
-
-It is also important to keep in mind that there is a significant migration between $\pT$ bins in heavy-ion collisions, widely understood as the effect of jet energy-loss.
+It is also important to keep in mind that there is a significant migration between $\pT$ bins in heavy-ion collisions, widely understood as the effect of jet energy-loss. This could result in a significant contribution, in a fixed $\pT$ bin, from jets that were minimally modified.
 
 The results from QPYTHIA exhibit a modest excess $\sim 10\%$ of hard quanta relative to vacuum, see \autoref{fig:PS2} (lower, left). In the model, the number of splittings is increased relative to vacuum leading to a significant intra-jet momentum broadening at scales corresponding to very short formation times.
 %\sout{JEWEL generates additional medium-induced branchings that are not present in the vacuum reference. These are also allowed to branch further in the medium. In the difference plot we can clearly identify an excess $\sim 20\%$ of large-angle, semi-hard quanta in JEWEL, see \autoref{fig:PS2} (lower, center). This excess shows up at larger $k_\perp$ and is further enhanced $\sim 30\%$ when medium recoils are included, see Fig.~\ref{fig:PS2} (lower, right). }
@@ -344,7 +313,7 @@ It is worth noting that, albeit in a complicated form, the splitting map contain
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In all the studies performed so far in this Section, we have not included the effect of embedding the jets into a realistic heavy-ion background. In the studies presented in the following Sections, we have modeled the underlying event as in \cite{deBarros:2012ws}. 
-This model randomly generates massless particles with uniform distribution at central rapidities. The transverse momentum distribution of the soft background is a Boltzmann distribution, with $\langle \pT \rangle$ = 1.2 GeV at the LHC. This is equivalent to an average momentum density of $\langle \rho \rangle =250$ GeV and a total multiplicity of $\sim 7000$ particles, which corresponds roughly to the most central events in the CMS detector. More details on the performance of jet reconstrution is such large background is privided in Appendix \ref{app:background}.
+This model randomly generates massless particles with uniform distribution at central rapidities. The transverse momentum distribution of the soft background is a Boltzmann distribution, with $\langle \pT \rangle$ = 1.2 GeV at the LHC. This is equivalent to an average momentum density of $\langle \rho \rangle =250$ GeV and a total multiplicity of $\sim 7000$ particles, which corresponds roughly to the most central events in the CMS detector, see also \cite{cerninstitute-twiki}. More details on the performance of jet reconstrution is such large background is provided in Appendix \ref{app:background}.
 %The centrality dependence is generated by scaling with the nuclear thickness function $\langle T_{AA} \rangle$.
 %\kmt{More details on background, where do we take it from, parameters,  referecens etc.. Details on embedding...}
 

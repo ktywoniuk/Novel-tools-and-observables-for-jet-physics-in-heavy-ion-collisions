@@ -1,102 +1,78 @@
 %\documentclass[preprint,12pt]{elsarticle}
-\documentclass{article}
+\documentclass[10pt,a4paper]{article}
 
 \input{definitions}
 
-%\journal{Physics Letters B} 
-
 \begin{document}
 
-\title{Novel tools and observables for jet physics \\ in heavy-ion collisions}
-%\large{Report of 5th Heavy Ion Jet Workshop/CERN TH institute, 25\textsuperscript{th} August-1\textsuperscript{st} September 2017}}
+\title{Novel tools and observables for jet physics in heavy-ion collisions}
+
+\author[1]{Harry Arthur Andrews}
+\author[2,3]{Liliana Apolinario}
+\author[4]{Redmer Alexander Bertens}
+\author[5,6]{Christian Bierlich}
+\author[7,8]{Matteo Cacciari}
+\author[9]{Yi Chen}
+\author[10]{Yang-Ting Chien}
+\author[11,4]{Leticia Cunqueiro Mendez}
+\author[12]{Michal Deak}
+\author[9]{David d'Enterria}
+\author[13]{Fabio Dominguez}
+\author[14]{Philip Coleman Harris}
+\author[12]{Krzysztof Kutak}
+\author[14]{Yen-Jie Lee}
+\author[15,16]{Yacine Mehtar-Tani}
+\author[17]{James Mulligan}
+\author[18]{Matthew Nguyen}
+\author[19]{Chang Ning-Bo}
+\author[20]{Dennis Perepelitsa}
+\author[21]{Gavin Salam\footnote{On leave from CNRS, UMR 7589, LPTHE, F-75005, Paris, France and from Rudolf Peierls Centre for Theoretical Physics, 1 Keble Road, Oxford OX1 3NP, UK.}}
+\author[22]{Martin Spousta}
+\author[2,3,21]{Jos\'e Guilherme Milhano}
+\author[21]{Konrad Tywoniuk}
+\author[23]{Marco Van Leeuwen}
+\author[24,25]{Marta Verweij}
+\author[13]{Victor Vila}
+\author[21]{Urs A. Wiedemann}
+\author[2,21]{Korinna C. Zapp}
 %
-% \author[1]{Souvik Priyam Adhya}
-\author[bir]{Harry Arthur Andrews}
-\author[lip,ist]{Liliana Apolinario}
-% \author[1]{Francois Arleo}
-% \author[1]{Austin Alan Baty}
-\author[ten]{Redmer Alexander Bertens}
-% \author[1]{Ran Bi}
-\author[lund,bohr]{Christian Bierlich}
-% \author[1]{Matteo Cacciari}
-% \author[1]{Shanshan Cao}
-% \author[1]{Jorge Casalderrey Solana}
-% \author[1]{Wei Chen}
-% \author[1]{Yi Chen}
-\author[mit]{Yang-Ting Chien}
-\author[oak,ten]{Leticia Cunqueiro Mendez}
-% \author[1]{Mrinal Dasgupta}
-\author[ifj]{Michal Deak}
-\author[cern]{David d'Enterria}
-\author[igf]{Fabio Dominguez}
-% \author[1]{Rudiger Haake}
-% \author[1]{Philip Coleman Harris}
-% \author[1]{Hadi Hassan}
-% \author[1]{Edmond Iancu}
-% \author[1]{Peter Martin Jacobs}
-% \author[1]{Kurt Jung}
-\author[ifj]{Krzysztof Kutak}
-\author[mit]{Yen-Jie Lee}
-% \author[1]{Tan Luo}
-% \author[1]{Christopher Mc Ginn}
-% \author[1]{Yacine Mehtar-Tani}
-% \author[1]{Camelia Mironov}
-\author[yal]{James Mulligan}
-% \author[1]{Matthew Nguyen}
-\author[itp]{Chang Ning-Bo}
-% \author[1]{Cheng-Chieh Peng}
-\author[col]{Dennis Perepelitsa}
-% \author[1]{Hendrik Poppenborg}
-% \author[1]{Anton Rebhan}
-% \author[1]{Rosi Jan Reed}
-% \author[1]{Gunther Roland}
-\author[cern]{Gavin Salam\footnote{On leave from CNRS, UMR 7589, LPTHE, F-75005, Paris, France and from Rudolf Peierls Centre for Theoretical Physics, 1 Keble Road, Oxford OX1 3NP, UK.}}
-% \author[1]{Carlos A. Salgado}
-% \author[1]{Dingyu Shao}
-\author[char]{Martin Spousta}
-% \author[1]{Kaya Tatar}
-\author[lip,ist,cern]{Jos\'e Guilherme Milhano}
-\author[cern]{Konrad Tywoniuk}
-\author[nik]{Marco Van Leeuwen}
-\author[van,rbrc]{Marta Verweij}
-\author[igf]{Victor Vila}
-\author[cern]{Urs A. Wiedemann}
-\author[lip,cern]{Korinna C. Zapp}
-%\author[1]{Nima Zardoshti}
-%
-% \affil[1]{please provide}
-\affil[bir]{University of Birmingham, Birmingham B15 2TT, United Kingdom}
-\affil[lip]{LIP, Av. Prof. Gama Pinto, 2, P-1649-003 Lisboa , Portugal}
-\affil[ist]{Instituto Superior T{\' e}cnico (IST), Universidade de Lisboa, Av. Rovisco Pais 1, 1049-001, Lisbon, Portugal}
-\affil[ten]{University of Tennessee, Knoxville, TN, USA-37996}
-\affil[lund]{Dept. of Astronomy and Theoretical Physics, S{\" o}lvegatan 14A, S-223 62 Lund, Sweden}
-\affil[bohr]{Niels Bohr Institute, Blegdamsvej 17, 2100 Copenhagen, Denmark}
-\affil[mit]{Center for Theoretical Physics, Massachusetts Institute of Technology,
-%77 Massachusetts Ave., 
-Cambridge, MA 02139, USA}
-\affil[oak]{Oak Ridge National Laboratory, Oak Ridge, Tennessee, United States}
-\affil[ifj]{Instytut Fizyki J{\c a}drowej (PAN), ul. Radzikowskiego 152, 31-342 Krak{\' o}w, Poland}
-\affil[yal]{Yale University, New Haven, Connecticut, United States}
-\affil[cern]{Theoretical Physics Department, CERN, 1211 Geneva 23, Switzerland}
-\affil[igf]{Instituto Galego de F{\' i}sica de Altas Enerx{\' i}as IGFAE, Universidade de Santiago de Compostela, Santiago de Compostela, 15782 Galicia, Spain}
-\affil[itp]{Institute of Theoretical Physics, Xinyang Normal University, Xinyang, Henan 464000, China}
-\affil[col]{University of Colorado Boulder, Boulder, CO 80309, USA}
-\affil[char]{Charles University, V Holesovickach 2, 180 00 Prague, Czech Republic}
-\affil[nik]{Institute for Subatomic Physics, Utrecht University/Nikhef, Utrecht, Netherlands}
-\affil[van]{Departement of Physics and Astronomy, Vanderbilt University, Nashville, TN 37235, USA}%Vanderbilt University and RIKEN BNL Research Center}
-\affil[rbrc]{RIKEN BNL Research Center, Brookhaven National Laboratory, Upton, NY 11973, USA}
+\affil[1]{University of Birmingham, Birmingham B15 2TT, United Kingdom}
+\affil[2]{LIP, Av. Prof. Gama Pinto, 2, P-1649-003 Lisboa , Portugal}
+\affil[3]{Instituto Superior T{\' e}cnico (IST), Universidade de Lisboa, Av. Rovisco Pais 1, 1049-001, Lisbon, Portugal}
+\affil[4]{University of Tennessee, Knoxville, TN, USA-37996}
+\affil[5]{Dept. of Astronomy and Theoretical Physics, S{\" o}lvegatan 14A, S-223 62 Lund, Sweden}
+\affil[6]{Niels Bohr Institute, Blegdamsvej 17, 2100 Copenhagen, Denmark}
+\affil[7]{Universit\'e Paris Diderot, F-75013 Paris, France}
+\affil[8]{Sorbonne Universit\'es, UPMC Univ. Paris 06, UMR 7589, LPTHE, F-75005, Paris, France; CNRS, UMR 7589, LPTHE, F-75005, Paris, France}
+\affil[9]{EP Department, CERN, 1211 Geneva, Switzerland}
+\affil[10]{Center for Theoretical Physics, Massachusetts Institute of Technology, 77 Massachusetts Ave, Cambridge, MA 02139, USA}
+\affil[11]{Oak Ridge National Laboratory, Oak Ridge, Tennessee, USA}
+\affil[12]{Instytut Fizyki J{\c a}drowej (PAN), ul. Radzikowskiego 152, 31-342 Krak{\' o}w, Poland}
+\affil[13]{Instituto Galego de F{\' i}sica de Altas Enerx{\' i}as IGFAE, Universidade de Santiago de Compostela, Santiago de Compostela, 15782 Galicia, Spain}
+\affil[14]{Massachusetts Institute of Technology, 77 Massachusetts Ave, Cambridge, MA 02139, USA}
+\affil[15]{Institute for Nuclear Theory, University of Washington, Box 351550, Seattle, WA 98195-1550, USA}
+\affil[16]{Physics Department, Brookhaven National Laboratory, Upton, NY 11973, USA}
+\affil[17]{Yale University, New Haven, Connecticut, USA}
+\affil[18]{Laboratoire Leprince-Ringuet, Ecole polytechnique, CNRS/IN2P3, Universit\'e Paris-Saclay, Palaiseau, France}
+\affil[19]{Institute of Theoretical Physics, Xinyang Normal University, Xinyang, Henan 464000, China}
+\affil[20]{University of Colorado Boulder, Boulder, CO 80309, USA}
+\affil[21]{Theoretical Physics Department, CERN, 1211 Geneva 23, Switzerland}
+\affil[22]{Charles University, V Holesovickach 2, 180 00 Prague, Czech Republic}
+\affil[23]{Institute for Subatomic Physics, Utrecht University/Nikhef, Utrecht, Netherlands}
+\affil[24]{Departement of Physics and Astronomy, Vanderbilt University, Nashville, TN 37235, USA}%Vanderbilt University and RIKEN BNL Research Center}
+\affil[25]{RIKEN BNL Research Center, Brookhaven National Laboratory, Upton, NY 11973, USA}
 
 \maketitle
 %\newpage
 
 \begin{abstract}
 %\abstract{
-Studies of fully reconstructed QCD jets in heavy-ion collisions aim to extract properties of hot and dense nuclear matter. Recently, substructure observables have opened new and exciting directions by introducing techniques that allows more differential measurements of jet modifications and extending the plethora of established observables. This report, summarizing the main lines of discussion at the 5th Heavy Ion Jet Workshop and CERN TH institute {\sl Novel tools and observables for jet physics in heavy-ion collisions} in 2017, presents a first attempt at outlining a strategy for isolating and identifying the relevant physical processes that are responsible for the observed modifications by combining theory insights with sophisticated jet reconstruction techniques, including grooming and background subtraction algorithms. 
+Studies of fully reconstructed QCD jets in heavy-ion collisions aim to extract properties of hot and dense nuclear matter. Recently, substructure observables have opened new and exciting directions by introducing techniques that allow more differential measurements of jet modifications and extending the plethora of established observables. This report, summarizing the main lines of discussion at the 5th Heavy Ion Jet Workshop and CERN TH institute {\sl Novel tools and observables for jet physics in heavy-ion collisions} in 2017, presents a first attempt at outlining a strategy for isolating and identifying the relevant physical processes that are responsible for the observed modifications by combining theory insights with sophisticated jet reconstruction techniques, including grooming and background subtraction algorithms. 
 %}
 \end{abstract}
 
 \begin{flushright}
-CERN-TH-2018-xxx, LU-TP 18-14, IFJPAN-IV-2018-8, MCNET-18-xx
+CERN-TH-2018-186, LU-TP 18-14, IFJPAN-IV-2018-8, MCNET-18-18
 \end{flushright}
 %
 %\tableofcontents
@@ -107,18 +83,16 @@ CERN-TH-2018-xxx, LU-TP 18-14, IFJPAN-IV-2018-8, MCNET-18-xx
 \input{outlook}
 
 \section*{Acknowledgements} 
-We thank all the participants of the 5th Heavy Ion Workshop and the TH institute {\sl Novel tools and observables for jet physics in heavy-ion collisions}, that made it a memorable and productive meeting.
+We thank all the participants of the 5th Heavy Ion Workshop and the TH institute {\sl ``Novel tools and observables for jet physics in heavy-ion collisions''}, that made it a memorable and productive meeting.
 We especially thank the CERN TH department for hosting and especially Michelangelo Mangano and Angela Ricci for providing organizational support before and during the meeting.
 M.S. was supported by Grant Agency of the Czech Republic (18-12859Y).
-J.G.M.'s work was supported  by the Funda{\c c}{\~ a}o para a Ci{\^ e}ncia e Tecnologia (Portugal) under contracts CERN/FIS-NUC/0049/2015, CERN/FIS-PAR/0022/2017, and Investigador FCT - Development Grant IF/00563/2012.
+We acknowledge support from  Funda{\c c}{\~ a}o para a Ci{\^ e}ncia e Tecnologia (Portugal) under contracts CERN/FIS-NUC/0049/2015 and CERN/FIS-PAR/0022/2017 (LA, JGM, KZ), SFRH/BPD/103196/2014 (LA),  Investigador FCT - Development Grant IF/00563/2012 (JGM), and Investigador FCT - Starting Grant IF/00634/2015 (KZ).
 DVP acknowledges funding from the Department of Energy under award DE-SC0018117.
-LA was supported by Funda{\c c}{\~ a}o para a Ci{\^ e}ncia e Tecnologia (FCT, Portugal) under contracts CERN/FIS-NUC/0049/2015 and SFRH/BPD/103196/2014.
 HAA acknowledges support from the Science and Technology Facilities Council (https://stfc.ukri.org/).
 CB was supported in part by Swedish Research Council, contracts number 2012-02283 and 2017-0034.
 JM acknowledges support from United States Department of Energy, Office of Nuclear Physics, United States of America.
 FD was supported by a Marie Sk\l{}odowska-Curie Individual Fellowship of the European Commission's Horizon 2020 Programme under contract number 660952 HPpQCD and Ministerio de Ciencia e Innovaci{\' o}n of Spain under projects FPA2014-58293-C2-1-P, FPA2017-83814-P and Unidad de Excelencia Mar{\' i}a de Maetzu under project MDM-2016-0692, by Xunta de Galicia (Conseller{\' i}a de Educaci{\' o}n) within the Strategic Unit AGRUP2015/11, and by FEDER.
 YJL acknowledges support from MIT MISTI France Seed Fund, US Department of Energy Grant DE-SC0011088 and US Department of Energy Early Career Award DE-SC0013905.
-KZ acknowledges support from Funda\c{c}\~{a}o para a Ci\^{e}ncia e a Tecnologia (Portugal) under project CERN/FIS-NUC/0049/2015 and contract `Investigador FCT - Starting Grant' IF/00634/2015.
 KK acknowledges the support of Narodowe Centrum Nauki with grant DEC-2017/27/B/ST2/01985.
 
 \appendix
