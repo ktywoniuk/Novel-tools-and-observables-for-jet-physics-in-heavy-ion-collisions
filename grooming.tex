@@ -5,8 +5,11 @@
 \label{sec:jetsubstructure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+In the last years, the study of jet substructure observables and associated techniques has expanded significantly in the context, in particular, of flavor-tagging (heavy-quark/light-quark/gluon discrimination), as well as in the identification of merged jets from Lorentz-boosted heavy particle decays in pp collisions at the LHC \cite{Ellis:2009su,Altheimer:2013yza}. Many different jet substructure variables have been systematically defined (generalized angularities: multiplicities, Les Houches Angularity, jet width or broadening, jet mass,...; eccentricity; groomed momentum fraction; N-subjettiness ratios; energy correlation functions;...) with varying sensitivity to the momentum and angular properties of the jet constituents. On the theoretical side, many of these variables are IRC safe (at least in the QCD vacuum) and, thereby, amenable to high-precision pQCD calculations, in some cases up to NLO+NNLL accuracy (at least for the non-quenched reference case) \cite{Marzani:2017mva,Frye:2016aiz}. Implementation of such techniques for jets in heavy-ion collisions, and comparison with the corresponding pp results, provides new handles to study the medium-induced radiation pattern, as well as to quantitatively control the impact of non-perturbative (hadronization) and underlying-event contributions to the jet substructure. Further exploitation of such observables---e.g. for light-quark, gluon, and heavy-quark jet discrimination---can open a new window to better understand the color factor and mass dependence of
+jet quenching phenomena.
+
 As mentioned before, jet substructure techniques usually involve a step which reorganizes the constituents of a jet into a hierarchical tree where the nodes represent subsequent splitting processes.
-This structure serves for further analysis using additional techniques called jet grooming and tagging algorithms.
+This structure serves for further analysis using additional techniques such as jet grooming and tagging algorithms.
 Grooming techniques usually reorganize the tree by discarding radiation that fail to pass given criteria, corresponding typically to soft and large-angle radiation. Taggers, on the other hand, aim at identifying the first splitting that passes a given criterion. In this way it splits a jet into two sub-jets. There has been a lot of progress recently utilizing these techniques for a wide range of substructure observables \cite{Butterworth:2008iy,Ellis:2009me,Krohn:2009th,Dasgupta:2013ihk,Larkoski:2014wba}, for a recent review see e.g. \cite{Larkoski:2017jix}. At least within the C/A algorithm, the subjets identified using grooming are in close correspondence to 
 %access to the properties of 
 the first splitting of the parton evolution in the vacuum~\cite{Altarelli:1977zs,Larkoski:2015lea}.
@@ -23,15 +26,15 @@ The Soft Drop algorithm reclusters the anti-$k_{\mathrm{T}}$ jet constituents us
 \frac{\mathrm{min}(p_{\mathrm{T},i},p_{\mathrm{T},j})}{p_{\mathrm{T},i}+p_{\mathrm{T},j}} > z_{\text{cut}}\left( \frac{\Delta R_{ij}}{R_{0}} \right)^{\beta},
 \eeq
 %\end{linenomath}
-is found, where the subscripts ``$i$'' and ``$j$'' indicate the subjets at that step of the declustering, $\Delta R_{ij}$ is the distance between the two subjets, $R_{0}$ is the cone size of the anti-$k_{\mathrm{T}}$ jet, and $z_{\text{cut}}$ and $\beta$ are adjustable parameters. By varying $z_{\text{cut}}$ and $\beta$, specific regions of the emission phase space, see \autoref{fig:PS1}, can be isolated. For $\beta = 0$, this procedure is identical to the modified mass-drop tagger \cite{Dasgupta:2013ihk}, while $\beta \neq 0$ was introduced in \cite{Larkoski:2014wba}. It allows to design specific grooming settings sensitive to distinct regions of the kinematical phase space represented in the Lund plane. Equivalently, the parameters can be adjusted to suppress or enhance the effect of medium modifications.
+is found, where the subscripts ``$i$'' and ``$j$'' indicate the subjets at that step of the declustering, $\Delta R_{ij}$ is the distance between the two subjets, $R_{0}$ is the cone size of the anti-$\kT$ jet, and $z_{\text{cut}}$ and $\beta$ are adjustable parameters. By varying $z_{\text{cut}}$ and $\beta$, specific regions of the emission phase space, see \autoref{fig:PS1}, can be isolated. For $\beta = 0$, this procedure is identical to the modified mass-drop tagger \cite{Dasgupta:2013ihk}, while $\beta \neq 0$ was introduced in \cite{Larkoski:2014wba}. It allows to design specific grooming settings sensitive to distinct regions of the kinematical phase space represented in the Lund plane. Equivalently, the parameters can be adjusted to suppress or enhance the effect of medium modifications.
 %, for example, to semi-hard radiation from single hard scatterings, soft radiation in the BDMPS regime and soft contribution originating from heating up the medium while the parton shower traverses it.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t!]
 \centering
-\includegraphics[width=0.33\textwidth]{figures/kinematics/plotVac_SD2_3}%
-\includegraphics[width=0.33\textwidth]{figures/kinematics/plotVac_SD1_3}%
-\includegraphics[width=0.33\textwidth]{figures/kinematics/plotVac_SD3_3}%
+\includegraphics[width=0.34\textwidth]{figures/kinematics/plotVac_SD1_4}%
+\includegraphics[width=0.34\textwidth]{figures/kinematics/plotVac_SD2_4}%
+\includegraphics[width=0.34\textwidth]{figures/kinematics/plotVac_SD3_4}%
 \caption{The three grooming settings studied in this report, see text for details. Shaded areas correspond to configurations that are groomed away.}
 \label{fig:TheorySD}
 \end{figure}
@@ -113,7 +116,7 @@ In this report, we compare the three grooming settings:
 
 After identifying the first splitting that satisfies Eq.~(\ref{eq:groompar}), we have access to the full kinematics of that branching step. The groomed jet energy ($\pT = E$) is now defined as $p_{{\rm \tiny T} g} \equiv p_{\mathrm{T},1}+p_{\mathrm{T},2}$, where the subscripts now refer to the identified subjets. We can then define the groomed momentum fraction, $z_g = \min \left(p_{{\rm \tiny T},1},p_{{\rm \tiny T},2}\right)/p_{{\rm \tiny T}g}$ and the angle $\Delta R_{12}$ between the subjets. In our numerical studies, we will focus on these two quantities but also introduce the groomed mass to energy ratio $M_g/\pT$, where $M_g$ is defined as in Eq.~(\ref{eq:DipoleMass}) with all relevant quantities being groomed. These observables shed light on how the branchings occur in course of the parton shower and are sensitive to medium effects as long as the branching originates from inside the medium, roughly $ t_{{\rm f}g}\equiv 2 p_{{\rm \tiny T}g}/M_g^2 < L$, see discussion above. For the chosen medium parameters, the samples analyzed with settings SD1 and SD2 will contain an admixture of in-medium and out-of-medium splittings, see \autoref{fig:TheorySD}, while SD3 picks exclusively out hard splittings originating from inside the medium. 
 
-As in the previous section, the jet quenching Monte Carlo event generators we use in our study are QPYTHIA and JEWEL (with recoil effects turned on and off) and are shown in \autoref{fig:SDGenZG}, \ref{fig:SDGenDR12} and \ref{fig:SDGenMg}. Jets were reconstructed using anti-$k_{\rm \tiny T}=0.4$ and for $\pT > 130$ GeV/c. 
+As in the previous section, the jet quenching Monte Carlo event generators we use in our study are QPYTHIA and JEWEL (with recoil effects turned on and off) and are shown in \autoref{fig:SDGenZG}, \ref{fig:SDGenDR12} and \ref{fig:SDGenMg}. Jets were reconstructed using anti-$\kT$ $R=0.4$ and for $\pT > 130$ GeV/c. 
 The results in this section are obtained at generator level, without embedding. In particular, we have not introduced any detector resolution effects, such as a minimal angular cut-off $\Delta R_{\rm min}$.
 Note, that the distributions are normalized by the total number of anti-$k_{\text{T}}$ (ungroomed) jets. The distributions are therefore not self-normalized and contain information how grooming affects the overall suppression of the jet yield. 
 
@@ -221,8 +224,8 @@ The last stage of the jet fragmentation is the non-perturbative process of hadro
 \label{fig:SDGenZGHadVsPart}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Even for vacuum physics, it is well known that the SD procedure has some sensitivity to hadronization effects, for $\beta = 0$ see \cite{Dasgupta:2015yua}.
-From perturbative arguments hadronization corrections to the jet $p_{T}$ grow like $R^{-1}$ \cite{Dasgupta:2007wa} and
+Even for jets in the QCD vacuum, it is well known that the SD procedure has some sensitivity to hadronization effects, for $\beta = 0$ see \cite{Dasgupta:2015yua}.
+From perturbative arguments, hadronization corrections to the jet $p_{T}$ grow like $R^{-1}$ \cite{Dasgupta:2007wa} and
 %inversely proportional to the jet resolution $R$: $\Delta p_{T}^{had} \approx \frac{-1}{R}$, 
 so are potentially important for subjet observables.
 However, since hadronization is a process that happens locally in phase space, jets are less sensitive to the hadronization uncertainties than observables based on hadrons. In this paragraph we investigate how sensitive groomed subjet observables are to the hadronization process. For this purpose we compare the \zg~distribution in PYTHIA8 with and without hadronization for the three SD settings described above, as shown in \autoref{fig:SDGenZGHadVsPart}. It can be observed that the low-\zg\, region is particularly sensitive to hadronization effects. For grooming with negative $\beta$ the hadron- and parton-level results are most similar, see Fig,~\ref{fig:SDGenZGHadVsPart} (right), because with these grooming settings the soft splittings are rejected. Dedicated studies of these effects in conjunction with medium-modified hadronization are left for the future.
@@ -242,7 +245,7 @@ However, since hadronization is a process that happens locally in phase space, j
 \label{fig:PS2Vac_2}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The change of algorithm also strongly affects what happens to the jet after grooming. In \autoref{fig:PS2Vac_2} (left), we show the distribution of the number of grooming steps for the three reconstruction algorithms discussed above. In particular, we note that the application of $\kT$ and anti-$\kT$ algorithms result in completely different grooming scenarios. While the jet reconstructed with the former algorithm are mainly unaffected by grooming, in the latter case of the order of $\sim 10-20$ branches are groomed away. This also strongly affects the $\pT$ of the groomed jet, as seen in \autoref{fig:PS2Vac_2} (right), where the groomed jets in the anti-$\kT$ sample on average lose $\sim 20$\% of their energy. The C/A algorithm falls in between the two extremes, and is the only algorithm that maps the phase space with an approximately constant density, see \autoref{fig:PS2Vac} (left). Of the order of $\sim 5$ branches are removed by the grooming procedure on average, which slightly reduces the jet $\pT$ by $\lesssim 10$\%.
+The change of algorithm also strongly affects what happens to the jet after grooming. In \autoref{fig:PS2Vac_2} (left), we show the distribution of the number of grooming steps for the three reconstruction algorithms discussed above. In particular, we note that the application of $\kT$ and anti-$\kT$ algorithms result in completely different grooming scenarios. While the jets reconstructed with the former algorithm are mainly unaffected by grooming, in the latter case of the order of 10--20 branches are groomed away. This also strongly affects the $\pT$ of the groomed jet, as seen in \autoref{fig:PS2Vac_2} (right), where the groomed jets in the anti-$\kT$ sample on average lose $\sim 20$\% of their energy. The C/A algorithm falls in between the two extremes, and is the only algorithm that maps the phase space with an approximately constant density, see \autoref{fig:PS2Vac} (left). Of the order of 5 branches are removed by the grooming procedure on average, which slightly reduces the jet $\pT$ by $\lesssim 10$\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[th]
@@ -260,7 +263,7 @@ The change of algorithm also strongly affects what happens to the jet after groo
 Finally, we studied the behavior of the three observables subject to different reclustering algorithms applied, see \autoref{fig:SDClusteringComp}. In this particular case, we limit ourselves only to looking at the PYTHIA8 (vacuum) samples.
 In case of a grooming prescription that requires a semi-hard splitting, for instance like in the SD1 setting,
 %$z_{cut}$=0.1, $\beta=0$, 
-the number of groomed branches will be large for anti-$k_{\rm \tiny T}$ reclustering ($\lesssim 30$) and very small for $k_{\rm \tiny T}$, for which the grooming conditions will be satisfied at the first iteration in most of the cases. Consistently, the groomed momentum fraction \zg\, probes very asymmetric splittings in the case of anti-$k_{\rm \tiny T}$ reclustering as can be seen in \autoref{fig:SDClusteringComp} (left). In contrast, $k_{\rm \tiny T}$-reclustered \zg\, picks exclusively up symmetric splittings, resulting in an almost featureless distribution. Similar conclusions can be made for the $\Delta R_{12}$ distribution, \autoref{fig:SDClusteringComp} (center), and $M_g$, \autoref{fig:SDClusteringComp} (right), as well. These artifacts are hard to reconcile with the expected behavior from QCD theory, and will therefore generally not be pursued further.
+the number of groomed branches will be large for anti-$k_{\rm \tiny T}$ reclustering ($\lesssim 30$) and very small for $k_{\rm \tiny T}$, for which the grooming conditions will be satisfied at the first iteration in most of the cases. Consistently, the groomed momentum fraction \zg\, probes very asymmetric splittings in the case of anti-$k_{\rm \tiny T}$ reclustering as can be seen in \autoref{fig:SDClusteringComp} (left). In contrast, $k_{\rm \tiny T}$-reclustered \zg\, picks only up symmetric splittings, resulting in an almost featureless distribution. Similar conclusions can be made for the $\Delta R_{12}$ distribution, \autoref{fig:SDClusteringComp} (center), and $M_g$, \autoref{fig:SDClusteringComp} (right), as well. Such artefacts are hard to reconcile with the expected behavior from QCD theory, and will therefore generally not be pursued further.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -268,31 +271,33 @@ the number of groomed branches will be large for anti-$k_{\rm \tiny T}$ recluste
 \label{sec:dissecting}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Many jet quenching observables, such as the nuclear modification factor $R_{AA}$ and the momentum imbalance in photon-jet events, are considered benchmark measurements that quantify the amount of in-medium energy-loss and broadening. For reviews, see e.g. \cite{dEnterria:2009xfs,Majumder:2010qh}. However, their constraining power to discriminate between models has also been questioned. In some cases, the influence of background fluctuations can further obscure their constraining power.
+Many jet quenching observables, such as the nuclear modification factor $R_{AA}$ and the momentum imbalance $x_{J\gamma}$ in photon-jet events, are considered benchmark measurements that quantify the amount of in-medium energy-loss and broadening. For reviews, see e.g. \cite{dEnterria:2009xfs,Majumder:2010qh}. However, their constraining power to discriminate between models has also been questioned. In some cases, the influence of background fluctuations can further obscure their constraining power.
 
 In this section we present studies of conventional jet quenching observables that are enhanced by using grooming techniques.  As a first step, we apply SD grooming on the inclusive jet sample, extracting from each jet the grooming variables $z_g$ and $\Delta R_{12}$. 
 This allows to further sub-divide the sample according to a measure involving these variables. 
 For the purposes of this report, we have simply binned the fully inclusive sample according to the angle separating the two hardest subjets of a particular jet. This is motivated by the studies using splitting maps and the results obtained for the substructure observables previously. Another motivation is to differentiate between the modifications of the ``soft'' and the ``hard'' structure of the jet. The former is more dominant for inclusive observables and for non-restrictive SD settings, e.g. SD1 and SD2 in \autoref{fig:TheorySD} (left and central panels), while the latter would be more pronounced for conservative SD parameter choices, such as SD3 in \autoref{fig:TheorySD} (right panel).
 
-Due to the limited scope of the workshop, we have not attempted to launch a systematic effort. Here, we only report on the two following studies at LHC energies:
+Due to the exploratory scope of the workshop, we have not attempted to launch a systematic effort. Here, we only report on the two following studies at LHC energies:
 \begin{itemize} 
 
-\item the nuclear modification factor $R_{AA}$ binned in the angular separation $\Delta R_{12}$ as found with SD2.
+\item the nuclear modification factor $R_{AA}$ binned in the angular separation $\Delta R_{12}$ as determined with SD2.
 
 \item the $x_{J\gamma}$ distribution binned in the angular separation $\Delta R_{12}$ as found with SD1. 
 \end{itemize}
 For both grooming settings, comparing small- and large-angle substructure configurations also gives an additional handle on the formation time of that particular splitting, see \autoref{fig:PS0} (right).
 
 In both cases, jets were reclustered and groomed, and only jets that had a candidate subjet pair that fulfilled the Soft Drop condition were further analyzed.
-More importantly, all results in this section have been computed by embedding the MC jet samples into a centrality-dependent heavy-ion background \cite{deBarros:2012ws}, for details see \autoref{sec:uncorrelatedbackground}. As before, the background was subtracted using CS \cite{Berta:2014eza}, see \autoref{app:background} for further details. Therefore, these result reflect more realistically the magnitude of effects that should be expected to arise in heavy-ion collisions at the LHC.
+More importantly, all results in this Section have been computed by embedding the MC jet samples into a centrality-dependent heavy-ion background \cite{deBarros:2012ws}, for details see \autoref{sec:uncorrelatedbackground}. As before, the background was subtracted using CS \cite{Berta:2014eza}, see \autoref{app:background} for further details. Therefore, these result reflect more realistically the magnitude of effects that should be expected to arise in heavy-ion collisions at the LHC.
 %{\color{red} Are the curves for $\Delta R>0.3$ consistent with the expected effect of uncorrelated background at large angles...? Was additional pile-up mitigation employed?}
 
 The well-known nuclear modification factor $R_{AA}$ compares the yields of equivalent hard processes in heavy-ions and proton-proton collisions, and is given schematically as
 \beq
 \label{eq:RAA}
-R_{AA} = \frac{\dd N_{AA}/\dd \pT^2 \dd y}{\langle N_\text{coll} \rangle \dd N_{pp}/\dd \pT^2 \dd y} \,,
+R_{AA} = \frac{\dd N_{AA}/\dd \pT^2 \dd y}{\langle T_{AA} \rangle \dd N_{pp}/\dd \pT^2 \dd y} \,,
 \eeq
-where $\langle N_\text{coll} \rangle$ counts the number of nucleon-nucleon collisions in a given centrality range,
+where
+% $\langle N_\text{coll} \rangle$ counts the number of nucleon-nucleon collisions in a given centrality range,
+$\langle T_{AA} \rangle$ is the nuclear overlap function in a given centrality range,
 is a standard benchmark for estimating/tuning medium parameters in theoretical calculations and Monte Carlo jet quenching models. By dividing the sample of inclusive high-$\pT$ jets into small- and large-angle configurations, we obtain more differential information regarding the accompanying modifications of the intra-jet structure. Similar studies, albeit using another method to dissect the jet sample into two-prong structures, was already presented in \cite{Zhang:2015trf,Apolinario:2017qay}.
 Note, however, that the suggested ``binning'' procedure could be sensitive to different physical mechanisms separately in the proton-proton and heavy-ion events. Disentangling this would demand further studies.
 
@@ -304,17 +309,16 @@ Note, however, that the suggested ``binning'' procedure could be sensitive to di
 \includegraphics[width=0.32\textwidth]{figures/Observables_RAA/Plot4}
 %\includegraphics[width=0.33\textwidth]{figures/LundMC/PythiaDiffCA_wLines200.pdf}%
 %\includegraphics[width=0.33\textwidth]{figures/LundMC/PythiaDiffCA_wLines80120.pdf}%
-\caption{The nuclear modification factor for subsamples of jets that have been unrolled as a function of $\Delta R$ of the leading sub-jets identified using SD1. 
+\caption{Nuclear modification factor, \autoref{eq:RAA}, for subsamples of jets binned as a function of $\Delta R$ of the leading sub-jets identified using SD1 for 0--10\% most central PbPb collisions.
 }
 \label{fig:GroomedRAA}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The jet samples generated from QPYTHIA, JEWEL ``Recoil off'' and JEWEL ``Recoil on'' that goes into calculating $R_{AA}$ in \autoref{fig:GroomedRAA}, has been binned according to the angular separation of the subjets identified using SD3 grooming, $\Delta R_{12}$. While all three models show a similar transverse momentum dependence of $R_{AA}$ for the fully inclusive sample (see black points in \autoref{fig:GroomedRAA}), large differences are seen for the more differential  results.\footnote{The overall magnitude of the inclusive $R_{AA}$ does not play an important role for the point we are trying to make here.} 
+The jet samples generated from QPYTHIA, JEWEL ``Recoil off'' and JEWEL ``Recoil on'' that is used in the calculation of $R_{AA}$ in \autoref{fig:GroomedRAA}, have been binned according to the angular separation of the subjets identified using SD3 grooming, $\Delta R_{12}$. While all three models show a similar transverse momentum dependence of $R_{AA}$ for the fully inclusive sample (see black points in Fig.~\ref{fig:GroomedRAA}), large differences are seen for the more differential  results.\footnote{The overall magnitude of the inclusive $R_{AA}$ does not play an important role for the point we are trying to make here.} 
 
-In QPYTHIA, the core of the jet is quenched stronger than the periphery, as expected from previous studies above, see \autoref{fig:GroomedRAA} (left). It is basically related to the enhanced splitting of collinear modes. For the JEWEL ``Recoils off'' sample, see \autoref{fig:GroomedRAA} (center), the effect is completely opposite: the jet core is quenched much less than large-angle configurations. This also comes as no surprise in light  of other substructure observables that were analyzed above, see e.g. \autoref{sec:groomedobservables}, and reflects stronger energy-loss effects for large-angle substructure fluctuations which implies that more partons are quenched \cite{Milhano:2015mng}. Finally including recoil effects, the JEWEL ``Recoils on'' sample, see \autoref{fig:GroomedRAA} (right), reveal a strong $\pT$-dependence of large-angle jets, leading to a big enhancement of $R_{AA}$ at relatively low transverse momenta. This implies an enhanced constraining power to details of medium recoil modeling in this observable.
+In QPYTHIA, the core of the jet is quenched stronger than the periphery, as expected from previous studies above, see \autoref{fig:GroomedRAA} (left). It is basically related to the enhanced splitting of collinear modes. For the JEWEL ``Recoils off'' sample, see \autoref{fig:GroomedRAA} (center), the effect is completely opposite: the jet core is quenched much less than large-angle configurations. This also comes as no surprise in light  of other substructure observables that were analyzed above, see e.g. \autoref{sec:groomedobservables}, and reflects stronger energy-loss effects for large-angle substructure fluctuations thereby leading to more quenched partons \cite{Milhano:2015mng}. Finally including recoil effects, the JEWEL ``Recoils on'' sample, see \autoref{fig:GroomedRAA} (right), reveal a strong $\pT$-dependence of large-angle jets, leading to a big enhancement of $R_{AA}$ at relatively low transverse momenta. This implies an enhanced constraining power to details of medium recoil modeling in this observable.
 
-Other benchmark observable in heavy-ion collisions include the $Z$-jet or photon-jet momentum asymmetry. Here, we will only focus on the latter.
-We recall that the variable $x_{J\gamma}$ is defined as the ratio of jet to photon momentum, 
+Other benchmark observables in heavy-ion collisions include the $Z$-jet or photon-jet momentum asymmetry. Here, we will only focus on the latter, defined as the ratio of jet to photon momentum, 
 \beq
 x_{J\gamma} = \frac{p_\text{{\tiny T},jet}}{p_{\text{\tiny T},\gamma}} \,.
 \eeq
@@ -327,13 +331,13 @@ In contrast to the nuclear modification factor \eqref{eq:RAA}, this observable d
 %{figures/Observables_GammaJet/GammaJet_groomed}%
 \includegraphics[width=0.5\textwidth]
 {figures/Observables_GammaJet/JEWEL-photon-jet-recoilOn-linear}%
-\caption{The $x_{J\gamma}$ distribution for subsamples of jets that have been binned as a function of the angle found between the leading sub-jets using SD. }
+\caption{The $x_{J\gamma}$ distribution for subsamples of groomed jets that have been binned as a function of the angle found between the leading sub-jets using SD. }
 \label{fig:GroomedGammaJet}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In \autoref{fig:GroomedGammaJet} we present the resulting $x_{J\gamma}$ distribution for the JEWEL ``Recoils on'' samples in two centrality bins (corresponding to $0-10$\% and $90-100$\% centrality). This sample has been binned in subjet angular separation, as described above, this time using SD2 grooming. The same features that have been pointed out multiple times, also show up here as a function of collision centrality. Notably, the small-angle sample shows very little dependence of centrality, and is closely peaked around 1. The large-angle sample, on the other hand, which also corresponds to jets formed earlier in the medium, is strongly distorted. While the distribution for  90-100\% centrality is broader for the large-angle sample, we observe that the peak structure, which is clearly visible in \autoref{fig:GroomedGammaJet}), is completely removed when going to the most central collisions. This clean observable, augmented by sophisticated substructure techniques, could therefore prove very constraining with regard to the modeling on recoil effects inside the jet cone.
+In \autoref{fig:GroomedGammaJet} we present the resulting $x_{J\gamma}$ distribution for the JEWEL ``Recoils on'' samples in two centrality bins (corresponding to 0--10\% and 90--100\% centrality). This sample has been binned in subjet angular separation, as described above, this time using SD2 grooming. The same features that have been pointed out multiple times, also show up here as a function of collision centrality. Notably, the small-angle sample shows very little dependence of centrality, and is closely peaked around 1. The large-angle sample, on the other hand, which also corresponds to jets formed earlier in the medium, is strongly distorted. While the distribution for  90-100\% centrality is broader for the large-angle sample, we observe that the peak structure, which is clearly visible in \autoref{fig:GroomedGammaJet}), is completely removed when going to the most central collisions. This clean observable, augmented by sophisticated substructure techniques, could therefore prove very constraining with regard to the modeling of recoil effects inside the jet cone.
 %\kmt{Features: groomed substructure gives us access to binning in formation time of that splitting of substructures; large angle sample is strongly modified! Very constraining for recoil modeling..? No need for pp baseline (often binning in ``heavy-ion-modified'' variables sample completely different processes in pp and AA. }
 
 These proof-of-principle studies illustrate the enhanced sensitivity to more than one variable that can be obtained by differentiating the inclusive jet sample using a well-controlled procedures. 
-In this section, we have analyzed medium-modified jet samples embedded in a heavy-ion background and utilized the angular separation between the leading subjets, as extracted Soft Drop procedure, in order to bin the jets into small- and large-angle configurations. While this should not come as a surprise in light of the previous results on the groomed substructure observables $z_g$, $\Delta R_{12}$ and $M_g/\pT$, we observe very different modification patters between the employed models and potentially large effects. Measurements of jets recoiling from $Z$-bosons or photons could prove as especially valuable in tracking how jets are modified in all variables, including the overall $\pT$ shift.
-However, the results presented in this section are only exploratory and more systematic studies are left for the future.
+In this section, we have analyzed medium-modified jet samples embedded in a heavy-ion background and utilized the angular separation between the leading subjets, as extracted in the Soft Drop procedure, in order to bin the jets into small- and large-angle configurations. While this should not come as a surprise in light of the previous results on the groomed substructure observables $z_g$, $\Delta R_{12}$ and $M_g/\pT$, we observe very different modification patters between the employed models and potentially large effects. Measurements of jets recoiling from $Z$-bosons or photons could prove as especially valuable in tracking how jets are modified in all variables, including the overall $\pT$ shift.
+The results presented in this section are only exploratory and more systematic studies are left for the future.

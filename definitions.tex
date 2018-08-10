@@ -26,15 +26,17 @@
 %\linenumbers
 \usepackage[affil-sl]{authblk}
 %auth-sc
+
+%\usepackage[doi=false,style=numeric-comp,citestyle=authoryear]{biblatex}
 %%%%%%%% PACKAGES %%%%%%%%
+
+%\addbibresource{THinstituteRefs.bib}
+%\bibliography{THinstituteRefs.bib}
 
 %\renewcommand\Authfont{\scshape\small}
 \renewcommand\Authfont{\normalsize}
 %\renewcommand\Affilfont{\itshape\small}
 \renewcommand\Affilfont{\slshape\small}
-
-
-
 
 \def\App#1{Appendix~\ref{#1}}
 \def\sectionautorefname{Section\!}
@@ -51,8 +53,8 @@
 	urlcolor={blue},
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	pdftitle={\gettitle},
-%	pdfauthor={Mehtar-Tani, Milhano, Salgado, Tywoniuk},
-	pdfkeywords={QCD jets} {Jet quenching},
+%	pdfauthor={},
+	pdfkeywords={QCD jets} {Jet quenching} {Jet substructure}
 	bookmarksopen=true,
 	bookmarksopenlevel=2,
 	bookmarksnumbered=true
@@ -158,7 +160,5 @@
 \def\OR{{\mathbb{P}_\text{R}}}
 
 \def\zcut{z_\text{cut}}
-
-\newcommand{\kmt}[1]{\textcolor{red}{[KMT: #1]}}
 %%%%%%%% DEFINITIONS %%%%%%%%
 

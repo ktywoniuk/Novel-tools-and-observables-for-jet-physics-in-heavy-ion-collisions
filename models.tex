@@ -1,7 +1,7 @@
 %!TEX root = THinstituteReport_1.tex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monte-Carlo parton showers}
+\section{Monte Carlo parton showers}
 \label{app:models}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -27,22 +27,22 @@ in Eq.~(\ref{eq:QPYTHIASudakov}), where
 \beq
 \Delta P(z) = \frac{2\pi t}{\alpha_s} \frac{\dd I^\med}{ \dd z \dd t} \,,
 \eeq
-where $\dd I^\med /(\dd z \dd t)$ is identified with the (double-differential) BDMPS spectrum. In the current implementation of QPYTHIA it is computed in the multiple-soft scattering approximation, that neglects hard medium interactions, and in the soft limit $z \ll 1$. In addition, the splitting function $g \to q\bar q$ is not modified by this prescription since it is subleading.
+where $\dd I^\med /(\dd z \dd t)$ is identified with the (double-differential) BDMPS spectrum \cite{Baier:1996sk}. In the current implementation of QPYTHIA it is computed in the multiple-soft scattering approximation, that neglects hard medium interactions, and in the soft limit $z \ll 1$. In addition, the splitting function $g \to q\bar q$ is not modified by this prescription since it is subleading.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{JEWEL}
 \label{app:jewel}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-JEWEL is also based on PYTHIA6, and handles exclusively the final-state parton shower routine. Let us summarize the main steps of the modified shower routine in three points.
+JEWEL is also based on PYTHIA6, and handles exclusively the final-state parton shower routine. The main steps of the modified shower routine can be summarized in three points:
 \begin{itemize}
 
-\item Within the program, every interaction with the medium is treated similarly to the hard, partonic scattering itself and described by a $2 \to 2$ perturbative matrix element, suitably regularized in the IR due to the dressing of medium quasi-particles. Hence, one invokes so-called ``partonic parton densities'' to allow hard medium kicks to resolve additional (virtual) jet constituents in course of the interaction. Scattering with the medium can also give rise to additional radiation.
+\item Within the program, every interaction with the medium is treated similarly to the hard, partonic scattering itself and described by a $2 \to 2$ perturbative matrix element, suitably regularized in the IR due to the dressing of medium quasi-particles. Hence, one invokes so-called ``partonic parton densities'' to allow hard medium kicks to resolve additional (virtual) jet constituents in the course of the interaction. Scattering with the medium can also give rise to additional radiation.
 
 \item The emission with the shortest formation time is realized first. This allows for a smooth interpolation between so-called vacuum emissions and the ones that are affected by medium interactions, often referred to as ``medium-induced''.
 
-\item The LPM effect is implemented by keeping track of the amount of re-scattering during the formation time of radiation.
+\item The Landau-Pomeranchuk-Migdal effect in QCD \cite{Wang:1994fx} is implemented by keeping track of the amount of re-scattering during the formation time of radiation.
 \end{itemize}
-Comparing to the analytical limits of single-gluon radiation spectrum, this treatment allows to treat the kinematics of emission and the interactions on a more precise level.
+Comparing to the analytical limits of single-gluon radiation spectrum, this approach allows to treat the kinematics of emission and the interactions on a more precise level.
 
 In addition to the showering, JEWEL also permits to track the momenta and color flow of the recoiling medium constituents that happen to interact with the jet. Note that the medium parton is counted as a final-state particle directly after the scattering, and is not allowed to interact further. We refer to this mode as ``Recoils on''. The mode ``Recoils off'' refers to the case when these partons are not included in the event record and discarded. In the former case, it is imperative to subtract the thermal momentum of the partons before their interaction with the jet, since it forms part of the uncorrelated  thermal background in heavy-ion events. This is most reliably done with the so-called ``4MomSub'' procedure which consists of subtracting the sum momenta of medium constituents entering a given jet, for further details see \cite{KunnawalkamElayavalli:2017hxo}. 
